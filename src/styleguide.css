@@ -1,0 +1,33 @@
+/* ============================================================================
+ * TOKY CSS — STYLEGUIDE
+ * ============================================================================
+ * This is your single customization file.
+ * TIP: Use https://oklch.com to pick your colors visually.
+ * ============================================================================ */
+
+@layer styleguide {
+  :root {
+    /* 🎨 BRAND COLORS — Change these 3 to customize everything */
+    --tk-color-primary: oklch(62.793% 0.25768 29.223);
+    --tk-color-secondary: oklch(0.60 0.16 190);
+    --tk-color-accent: oklch(0.80 0.18 80);
+
+    /* Neutral hue — tints grays toward your brand */
+    --tk-color-neutral: oklch(66.66% 0.03151 259.611); 
+    --tk-color-theme: oklch(86.66% 0.03151 259.611); 
+    
+
+    /* 🔤 TYPOGRAPHY */
+    /* System Fallback Font Families */
+    --tk-font-sans: "Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --tk-font-serif: "Georgia", "Times New Roman", serif;
+    --tk-font-mono: "JetBrains Mono", "Fira Code", "SF Mono", monospace;
+
+    /* Set Your Prefered Font Families + System Fallbacks */
+    --tk-font-display: "Inter" , var(var(--tk-font-sans));
+    --tk-font-heading: "Inter" , var(var(--tk-font-sans));
+    --tk-font-body: "Inter" , var(var(--tk-font-serif));
+    --tk-font-num: Consolas , var(var(--tk-font-mono));
+
+  }
+}

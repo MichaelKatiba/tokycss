@@ -1,0 +1,403 @@
+:root{
+    /* ====================================================================== */
+    /* LAYOUT SYSTEM                                                          */
+    /* ====================================================================== */
+
+    /*
+   * Layout Properties
+   *
+   * These variables define common layout values for consistent usage.
+   * Using variables for these properties ensures consistency across the codebase.
+   */
+
+    /*
+   * Position Properties
+   *
+   * These variables define CSS position values for consistent usage.
+   * Position determines how an element is positioned in the document flow.
+   */
+    --tk-position-static: static; /* Default positioning in document flow */
+    --tk-position-relative: relative; /* Positioned relative to normal position */
+    --tk-position-absolute: absolute; /* Positioned relative to nearest positioned ancestor */
+    --tk-position-fixed: fixed; /* Positioned relative to viewport */
+    --tk-position-sticky: sticky; /* Positioned based on scroll position */
+
+    /*
+   * Display Properties
+   *
+   * These variables define CSS display values for consistent usage.
+   * Display determines how an element is rendered in the layout.
+   */
+    --tk-display-block: block; /* Element generates a block box */
+    --tk-display-inline: inline; /* Element generates an inline box */
+    --tk-display-inline-block: inline-block; /* Inline-level block container */
+    --tk-display-flex: flex; /* Flexible box layout */
+    --tk-display-inline-flex: inline-flex; /* Inline-level flex container */
+    --tk-display-grid: grid; /* Grid layout */
+    --tk-display-none: none; /* Element is not displayed */
+    --tk-display-table: table; /* Table layout */
+    --tk-display-table-row: table-row; /* Table row layout */
+    --tk-display-table-cell: table-cell; /* Table cell layout */
+    --tk-display-table-column: table-column; /* Table column layout */
+    --tk-display-table-column-group: table-column-group; /* Table column group layout */
+    --tk-display-table-header-group: table-header-group; /* Table header group layout */
+    --tk-display-table-footer-group: table-footer-group; /* Table footer group layout */
+    --tk-display-table-row-group: table-row-group; /* Table row group layout */
+    --tk-display-flow-root: flow-root; /* Flow root layout */
+    --tk-display-contents: contents; /* Element is not displayed */
+    --tk-display-list-item: list-item; /* Element is displayed as a list item */
+    --tk-display-ruby: ruby; /* Element is displayed as a ruby annotation */
+    --tk-display-ruby-base: ruby-base; /* Element is displayed as a ruby base */
+    --tk-display-ruby-text: ruby-text; /* Element is displayed as a ruby text */
+    --tk-display-ruby-base-container: ruby-base-container; /* Element is displayed as a ruby base container */
+
+    /*
+   * Box Model Properties
+   *
+   * These variables define box model behavior for consistent usage.
+   */
+    --tk-box-sizing-border: border-box; /* Width/height includes padding and border */
+    --tk-box-sizing-content: content-box; /* Width/height excludes padding and border */
+    --tk-box-decoration-slice: slice; /* Background doesn't extend across fragments */
+    --tk-box-decoration-clone: clone; /* Background extends across fragments */
+
+    /*
+   * Overflow Properties
+   *
+   * These variables define how content that overflows the element's box is handled.
+   */
+    --tk-overflow-auto: auto; /* Add scrollbars when needed */
+    --tk-overflow-hidden: hidden; /* Clip overflow content */
+    --tk-overflow-visible: visible; /* Content not clipped, may overflow */
+    --tk-overflow-scroll: scroll; /* Always show scrollbars */
+    --tk-overscroll-auto: auto; /* Default overscroll behavior */
+    --tk-overscroll-contain: contain; /* Prevent scroll chaining */
+    --tk-overscroll-none: none; /* Prevent overscroll effects */
+
+    /*
+   * Aspect Ratio Properties
+   *
+   * These variables define common aspect ratios for responsive elements.
+   * Useful for maintaining proportional dimensions for images, videos, etc.
+   */
+    --tk-aspect-ratio-square: 1 / 1; /* 1:1 ratio (square) */
+    --tk-aspect-ratio-video: 16 / 9; /* 16:9 ratio (standard video) */
+    --tk-aspect-ratio-portrait: 3 / 4; /* 3:4 ratio (portrait) */
+    --tk-aspect-ratio-landscape: 4 / 3; /* 4:3 ratio (landscape) */
+    --tk-aspect-ratio-widescreen: 21 / 9; /* 21:9 ratio (ultrawide) */
+    --tk-aspect-ratio-golden: 1.618 / 1; /* Golden ratio (aesthetically pleasing) */
+
+    /*
+   * Float and Clear Properties
+   *
+   * These variables define float and clear values for consistent usage.
+   * Float allows elements to be placed to the left or right of their container.
+   */
+    --tk-float-left: left; /* Float element to the left */
+    --tk-float-right: right; /* Float element to the right */
+    --tk-float-none: none; /* Do not float element */
+    --tk-clear-left: left; /* Clear left floats */
+    --tk-clear-right: right; /* Clear right floats */
+    --tk-clear-both: both; /* Clear both left and right floats */
+
+    /*
+   * Object Fit Properties
+   *
+   * These variables define how replaced elements (like images) should be resized.
+   */
+    --tk-object-fit-contain: contain; /* Preserve aspect ratio, fit within box */
+    --tk-object-fit-cover: cover; /* Fill box, may crop image */
+    --tk-object-fit-fill: fill; /* Stretch to fill box */
+    --tk-object-fit-scale-down: scale-down; /* Smaller of contain or none */
+    --tk-object-position-center: center; /* Center the object within its box */
+
+    /*
+   * Visibility and Isolation Properties
+   *
+   * These variables define visibility and stacking context behavior.
+   */
+    --tk-visibility-visible: visible; /* Element is visible */
+    --tk-visibility-hidden: hidden; /* Element is hidden but takes up space */
+    --tk-visibility-collapse: collapse; /* Element is hidden (for table rows/columns) */
+    --tk-isolation-isolate: isolate; /* Create new stacking context */
+    --tk-isolation-auto: auto; /* Default stacking context behavior */
+
+    /*
+   * Positioning Properties
+   *
+   * These variables define common inset values for positioned elements.
+   */
+    --tk-inset-0: 0; /* No offset from container edges */
+    --tk-inset-auto: auto; /* Automatic positioning */
+
+    /* ====================================================================== */
+    /* FLEXBOX SYSTEM                                                          */
+    /* ====================================================================== */
+
+    /*
+   * Flexbox Properties
+   *
+   * These variables define common flexbox values for consistent usage.
+   * Flexbox is a one-dimensional layout method for arranging items.
+   */
+
+    /* Flex Direction */
+    --tk-flex-direction-row: row; /* Items arranged in a row */
+    --tk-flex-direction-row-reverse: row-reverse; /* Items arranged in a row, reversed */
+    --tk-flex-direction-column: column; /* Items arranged in a column */
+    --tk-flex-direction-column-reverse: column-reverse; /* Items arranged in a column, reversed */
+
+    /* Flex Wrap */
+    --tk-flex-wrap: wrap; /* Items wrap to multiple lines */
+    --tk-flex-nowrap: nowrap; /* Items forced into a single line */
+    --tk-flex-wrap-reverse: wrap-reverse; /* Items wrap to multiple lines, reversed */
+
+    /* Justify Content (main axis) */
+    --tk-justify-start: flex-start; /* Items packed at start of container */
+    --tk-justify-end: flex-end; /* Items packed at end of container */
+    --tk-justify-center: center; /* Items centered in container */
+    --tk-justify-between: space-between; /* Items evenly distributed with space between */
+    --tk-justify-around: space-around; /* Items evenly distributed with space around */
+    --tk-justify-evenly: space-evenly; /* Items evenly distributed with equal space */
+
+    /* Align Items (cross axis) */
+    --tk-align-start: flex-start; /* Items aligned at start of cross axis */
+    --tk-align-end: flex-end; /* Items aligned at end of cross axis */
+    --tk-align-center: center; /* Items centered on cross axis */
+    --tk-align-baseline: baseline; /* Items aligned by text baseline */
+    --tk-align-stretch: stretch; /* Items stretched to fill container */
+
+    /* ====================================================================== */
+    /* GRID SYSTEM                                                            */
+    /* ====================================================================== */
+    /* START OF THE PAGE GRID LAYOUT ENGINE
+ * This system uses CSS Grid to create a powerful page layout system
+ * that natively supports full-bleed and breakout content. It replaces
+ * traditional padding-based containers.
+*/
+
+    /* --- User-Editable Layout Configuration --- */
+
+    /*
+   * Sets the maximum width of the primary readable content layout.
+   * Use 'ch' for readability, or a fixed unit like 'rem' or 'px' for design precision.
+   * Example: 70ch (ideal for articles), 80rem (for a 1280px container).
+   */
+    --tk-layout-page-width: 100ch;
+
+    /*
+   * Sets how much a '.layout-wide' element should extend beyond the main content.
+   * This is the size of the "breakout" on each side.
+   */
+    --tk-layout-wide-offset: 4rem;
+
+    /* Sets the second, larger breakout size, extending beyond the 'wide' lane. */
+    --tk-layout-wider-offset: 8rem;
+
+    /*
+   * Defines the minimum gutter space on the left and right sides of the page.
+   * This also acts as the default padding on mobile devices.
+   */
+    --tk-layout-gutter: 1.5rem;
+
+    /* --- Grid Definition (Framework Internals - Do Not Edit) --- */
+    /*
+   * This variable uses the settings above to create the named grid columns
+   * that power the entire layout system.
+   */
+    --tk-layout-grid: [full-start] minmax(var(--tk-layout-gutter), 1fr)
+        [wider-start] minmax(0, min(var(--tk-layout-wider-offset), 8vw))
+        [wide-start] minmax(0, min(var(--tk-layout-wide-offset), 4vw))
+        [main-start]
+        min(
+            100% - (var(--tk-layout-gutter) * 2),
+            var(--tk-layout-page-width)
+        )
+        [main-end] minmax(0, min(var(--tk-layout-wide-offset), 4vw))
+        [wide-end] minmax(0, min(var(--tk-layout-wider-offset), 8vw))
+        [wider-end] minmax(var(--tk-layout-gutter), 1fr) [full-end];
+
+    /* END OF THE PAGE GRID LAYOUT ENGINE                                         */
+
+    /*
+   * Grid Placement Properties
+   *
+   * These variables define how grid items are placed within the grid container.
+   * They control both individual items and groups of items.
+   */
+    --tk-place-items-start: start; /* Items placed at start of their area */
+    --tk-place-items-end: end; /* Items placed at end of their area */
+    --tk-place-items-center: center; /* Items placed at center of their area */
+    --tk-place-items-stretch: stretch; /* Items stretched to fill their area */
+
+    --tk-place-content-start: start; /* Content placed at start of grid */
+    --tk-place-content-end: end; /* Content placed at end of grid */
+    --tk-place-content-center: center; /* Content placed at center of grid */
+    --tk-place-content-stretch: stretch; /* Content stretched to fill grid */
+    --tk-place-content-around: space-around; /* Content evenly distributed with space around */
+    --tk-place-content-between: space-between; /* Content evenly distributed with space between */
+    --tk-place-content-evenly: space-evenly; /* Content evenly distributed with equal space */
+
+    /* Grid Item Alignment (for individual items) */
+    --tk-align-self-start: start; /* Item aligned at start of grid area */
+    --tk-align-self-end: end; /* Item aligned at end of grid area */
+    --tk-align-self-center: center; /* Item aligned at center of grid area */
+    --tk-align-self-stretch: stretch; /* Item stretched to fill grid area */
+
+    /* Grid Item Justification (for individual items) */
+    --tk-justify-self-start: start; /* Item justified at start of grid area */
+    --tk-justify-self-end: end; /* Item justified at end of grid area */
+    --tk-justify-self-center: center; /* Item justified at center of grid area */
+    --tk-justify-self-stretch: stretch; /* Item stretched to fill grid area */
+
+    /*
+   * Grid Properties
+   *
+   * These variables define common grid layout values for consistent usage.
+   * CSS Grid is a two-dimensional layout system for complex layouts.
+   */
+
+    /* Grid Configuration */
+    --tk-grid-column-count-12: 12; /* Default number of columns */
+    --tk-grid-min-col-width-2xs: 80px; /* Minimum column width for responsive grids */
+    --tk-grid-min-col-width-xs: 160px; /* Minimum column width for responsive grids */
+    --tk-grid-min-col-width-sm: 200px; /* Minimum column width for responsive grids */
+    --tk-grid-min-col-width-md: 280px; /* Minimum column width for responsive grids */
+    --tk-grid-min-col-width-lg: 320px; /* Minimum column width for responsive grids */
+    --tk-grid-min-col-width-xl: 380px; /* Minimum column width for responsive grids */
+    --tk-grid-min-col-width-2xl: 400px; /* Minimum column width for responsive grids */
+    --tk-grid-min-col-width-3xl: 480px; /* Minimum column width for responsive grids */
+    --tk-grid-row-count-1: 1; /* Default number of rows */
+    --tk-grid-min-row-height: 100px; /* Minimum row height for responsive grids */
+
+    /* Grid Item Placement */
+    --tk-min-column-width: 0; /* Minimum width for auto columns */
+    --tk-max-column-width: 1fr; /* Maximum width for auto columns */
+    --tk-min-row-height: 0; /* Minimum height for auto rows */
+    --tk-max-row-height: 1fr; /* Maximum height for auto rows */
+
+    /*
+   * Grid Auto Properties
+   *
+   * These variables define how grid items are automatically placed and sized.
+   * Auto-fit and auto-fill create responsive layouts without media queries.
+   */
+
+    /* Grid Templates */
+    --tk-grid-auto-columns: auto; /* Automatically sized columns */
+    --tk-grid-cols-12: repeat(
+        var(--tk-grid-column-count-12, 12),
+        minmax(0, 1fr)
+    ); /* Equal columns */
+    --tk-grid-cols-auto-fit-2xs: repeat(
+        auto-fit,
+        minmax(var(--tk-grid-min-col-width-2xs, 80px), 1fr)
+    ); /* Responsive columns */
+    --tk-grid-cols-auto-fit-xs: repeat(
+        auto-fit,
+        minmax(var(--tk-grid-min-col-width-xs, 160px), 1fr)
+    ); /* Responsive columns */
+    --tk-grid-cols-auto-fit-sm: repeat(
+        auto-fit,
+        minmax(var(--tk-grid-min-col-width-sm, 200px), 1fr)
+    ); /* Responsive columns */
+    --tk-grid-cols-auto-fit-base: repeat(
+        auto-fit,
+        minmax(var(--tk-grid-min-col-width-md, 280px), 1fr)
+    ); /* Responsive columns */
+    --tk-grid-cols-auto-fit-lg: repeat(
+        auto-fit,
+        minmax(var(--tk-grid-min-col-width-lg, 320px), 1fr)
+    ); /* Responsive columns */
+    --tk-grid-cols-auto-fit-xl: repeat(
+        auto-fit,
+        minmax(var(--tk-grid-min-col-width-xl, 380px), 1fr)
+    ); /* Responsive columns */
+    --tk-grid-cols-auto-fit-2xl: repeat(
+        auto-fit,
+        minmax(var(--tk-grid-min-col-width-2xl, 400px), 1fr)
+    ); /* Responsive columns */
+    --tk-grid-cols-auto-fit-3xl: repeat(
+        auto-fit,
+        minmax(var(--tk-grid-min-col-width-3xl, 480px), 1fr)
+    ); /* Responsive columns */
+
+    --tk-grid-cols-auto-fill-2xs: repeat(
+        auto-fill,
+        minmax(var(--tk-grid-min-col-width-2xs, 80px), 1fr)
+    ); /* Responsive columns */
+    --tk-grid-cols-auto-fill-xs: repeat(
+        auto-fill,
+        minmax(var(--tk-grid-min-col-width-xs, 160px), 1fr)
+    ); /* Responsive columns */
+    --tk-grid-cols-auto-fill-sm: repeat(
+        auto-fill,
+        minmax(var(--tk-grid-min-col-width-sm, 200px), 1fr)
+    ); /* Responsive columns */
+    --tk-grid-cols-auto-fill-md: repeat(
+        auto-fill,
+        minmax(var(--tk-grid-min-col-width-md, 280px), 1fr)
+    ); /* Responsive columns */
+    --tk-grid-cols-auto-fill-lg: repeat(
+        auto-fill,
+        minmax(var(--tk-grid-min-col-width-lg, 320px), 1fr)
+    ); /* Responsive columns */
+    --tk-grid-cols-auto-fill-xl: repeat(
+        auto-fill,
+        minmax(var(--tk-grid-min-col-width-xl, 380px), 1fr)
+    ); /* Responsive columns */
+    --tk-grid-cols-auto-fill-2xl: repeat(
+        auto-fill,
+        minmax(var(--tk-grid-min-col-width-2xl, 400px), 1fr)
+    ); /* Responsive columns */
+    --tk-grid-cols-auto-fill-3xl: repeat(
+        auto-fill,
+        minmax(var(--tk-grid-min-col-width-3xl, 480px), 1fr)
+    ); /* Responsive columns */
+
+    --tk-grid-rows-1: repeat(
+        var(--tk-grid-row-count-1, 1),
+        minmax(0, 1fr)
+    ); /* Equal rows */
+
+    /* Grid Item Placement */
+    --tk-col-span: span var(--tk-column-span, 1); /* Column span for grid items */
+    --tk-row-span: span var(--tk-row-span, 1); /* Row span for grid items */
+
+    /* Grid Flow */
+    --tk-grid-flow-row: row; /* Grid auto-placement by row */
+    --tk-grid-flow-col: column; /* Grid auto-placement by column */
+    --tk-grid-flow-dense: dense; /* Dense packing algorithm */
+
+    /* Grid Auto Columns and Rows */
+    --tk-auto-cols: minmax(
+        var(--tk-min-column-width, 0),
+        var(--tk-max-column-width, 1fr)
+    );
+    --tk-auto-rows: minmax(
+        var(--tk-min-row-height, 0),
+        var(--tk-max-row-height, 1fr)
+    );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,169 @@
+:root{
+
+    /* ====================================================================== */
+    /* ANIMATION SYSTEM                                                       */
+    /* ====================================================================== */
+
+    --tk-anim-default-duration: 600ms;
+    --tk-anim-default-easing: cubic-bezier(
+        0.25,
+        0.46,
+        0.45,
+        0.94
+    ); /* Ease Out Quad */
+
+    /*
+   * Animation Duration Variables
+   *
+   * These variables define animation durations for consistent timing across the framework.
+   * Used by both transitions and animations for unified motion design.
+   */
+
+    /* Duration */
+    --tk-duration-2x: 0.1s; /* Extra extra fast animations */
+    --tk-duration-xs: 0.2s; /* Extra fast animations */
+    --tk-duration-sm: 0.5s; /* Fast animations */
+    --tk-duration-md: 0.8s; /* Standard animations */
+    --tk-duration-lg: 1.2s; /* Slow animations */
+    --tk-duration-xl: 2s; /* Very slow animations */
+    --tk-duration-xxl: 4s; /* Very very slow animations */
+    --tk-duration-xxxl: 8s; /* Very very very slow animations */
+
+    /*
+   * Animation Delay Variables
+   *
+   * These variables define animation delays for staggered effects.
+   */
+
+    /* Delay */
+    --tk-delay-2x: 0.05s; /* Extra extra fast delay */
+    --tk-delay-xs: 0.1s; /* Extra fast delay */
+    --tk-delay-sm: 0.2s; /* Fast delay */
+    --tk-delay-md: 0.4s; /* Medium delay */
+    --tk-delay-lg: 0.6s; /* Large delay */
+    --tk-delay-xl: 0.8s; /* Extra large delay */
+    --tk-delay-xxl: 1.2s; /* Extra extra large delay */
+    --tk-delay-xxxl: 2s; /* Extra extra extra large delay */
+
+    /*
+   * Animation Engine Variables
+   *
+   * These variables control the default behavior of the animation engine.
+   */
+    --tk-anim-default-duration: var(
+        --tk-duration-md
+    ); /* Default animation duration */
+    --tk-anim-default-timing: ease-out; /* Default timing function */
+    --tk-anim-default-fill-mode: both;
+    --tk-anim-default-iteration-count: 1; /* Default iteration count */
+    --tk-anim-default-direction: normal; /* Default direction */
+    --tk-anim-default-play-state: running; /* Default play state */
+
+    /*
+   * Animation Properties
+   *
+   * These variables define common animation presets for consistent usage.
+   * Animations create movement and visual interest in the interface.
+   */
+    --tk-animation-none: none; /* No animation */
+    --tk-animation-spin: spin 1s linear infinite; /* Spinning animation */
+    --tk-animation-ping: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite; /* Ping/pulse effect */
+    --tk-animation-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; /* Subtle pulse */
+    --tk-animation-bounce: bounce 1s infinite; /* Bouncing effect */
+    --tk-animation-fade: fade 1s ease-in-out infinite; /* Fade effect */
+    --tk-animation-slide: slide 1s ease-in-out infinite; /* Slide effect */
+    --tk-animation-fade-slide: fade-slide 1s ease-in-out infinite; /* Fade and slide effect */
+    --tk-animation-fade-bounce: fade-bounce 1s ease-in-out infinite; /* Fade and bounce effect */
+
+    /* ====================================================================== */
+    /* EASING SYSTEM                                                          */
+    /* ====================================================================== */
+
+    /*
+   * Easing Functions
+   *
+   * These variables define timing functions that control animation pacing.
+   * Different easing functions create different feelings of motion.
+   */
+
+    /* Standard Easing Functions */
+    --tk-ease: cubic-bezier(0.25, 0.1, 0.25, 1); /* Standard ease */
+    --tk-ease-in: cubic-bezier(0.42, 0, 1, 1); /* Slow start, fast end */
+    --tk-ease-out: cubic-bezier(0, 0, 0.58, 1); /* Fast start, slow end */
+    --tk-ease-in-out: cubic-bezier(0.42, 0, 0.58, 1); /* Slow start and end */
+
+    /* Expressive Easing Functions */
+    --tk-ease-elastic: cubic-bezier(
+        0.68,
+        -0.55,
+        0.265,
+        1.55
+    ); /* Elastic/bouncy */
+    --tk-ease-bounce: cubic-bezier(
+        0.175,
+        0.885,
+        0.32,
+        1.275
+    ); /* Bouncy end */
+    --tk-ease-back: cubic-bezier(
+        0.68,
+        -0.55,
+        0.265,
+        1.55
+    ); /* Slight overshoot */
+
+    /* Physics-inspired Easing */
+    --tk-ease-spring: cubic-bezier(0.5, 0.1, 0.1, 1); /* Spring-like motion */
+    --tk-ease-gravity: cubic-bezier(
+        0.175,
+        0.885,
+        0.32,
+        1.275
+    ); /* Gravity effect */
+    --tk-ease-snappy: cubic-bezier(
+        0.1,
+        0.9,
+        0.2,
+        1
+    ); /* Quick, snappy motion */
+
+    /* ====================================================================== */
+    /* TRANSITION SYSTEM                                                      */
+    /* ====================================================================== */
+
+    /*
+   * Transition Properties
+   *
+   * These variables define common transition presets for consistent usage.
+   * Transitions create smooth animations between property changes.
+   */
+
+    /* Transition Durations */
+    --tk-transition-2x: 150ms; /* Extra extra fast transitions */
+    --tk-transition-xs: 200ms; /* Extra fast transitions */
+    --tk-transition-sm: 250ms; /* Fast transitions */
+    --tk-transition-md: 300ms; /* Standard transitions */
+    --tk-transition-lg: 350ms; /* Slow transitions */
+    --tk-transition-xl: 400ms; /* Extra slow transitions */
+    --tk-transition-xxl: 450ms; /* Extra extra slow transitions */
+    --tk-transition-xxxl: 500ms; /* Extra extra extra slow transitions */
+
+    /* Common Transitions */
+    --tk-transition-all: all 0.4s var(--tk-ease); /* All properties */
+    --tk-transition-all-2x: all 0.15s var(--tk-ease); /* Extra extra fast transitions */
+    --tk-transition-all-xs: all 0.2s var(--tk-ease); /* Extra fast transitions */
+    --tk-transition-all-sm: all 0.25s var(--tk-ease); /* Fast transitions */
+    --tk-transition-all-md: all 0.3s var(--tk-ease); /* Standard transitions */
+    --tk-transition-all-lg: all 0.35s var(--tk-ease); /* Slow transitions */
+    --tk-transition-all-xl: all 0.4s var(--tk-ease); /* Extra slow transitions */
+    --tk-transition-all-xxl: all 0.45s var(--tk-ease); /* Extra extra slow transitions */
+    --tk-transition-all-xxxl: all 0.5s var(--tk-ease); /* Extra extra extra slow transitions */
+    --tk-transition-color: color 0.4s var(--tk-ease); /* Color only */
+    --tk-transition-background: background 0.4s var(--tk-ease); /* Background only */
+    --tk-transition-border: border 0.4s var(--tk-ease); /* Border only */
+    --tk-transition-opacity: opacity 0.4s var(--tk-ease); /* Opacity only */
+    --tk-transition-transform: transform 0.4s var(--tk-ease); /* Transform only */
+    --tk-transition-box-shadow: box-shadow 0.4s var(--tk-ease); /* Shadow only */
+
+
+}

@@ -1,0 +1,333 @@
+:root{
+  --tk-screen-sm: 480px;
+  --tk-screen-md: 768px;
+  --tk-screen-lg: 1024px;
+  --tk-screen-xl: 1280px;
+  --tk-screen-2xl: 1440px;
+    
+/* ====================================================================== */
+/* COMMON VALUES SYSTEM                                                   */
+/* ====================================================================== */
+
+ /*
+* Common Values
+*
+* These variables define frequently used values to ensure consistency
+* and reduce repetition throughout the framework.
+*/
+--tk-value-auto: auto;
+--tk-value-none: none;
+--tk-value-normal: normal;
+--tk-value-inherit: inherit;
+--tk-value-initial: initial;
+--tk-value-unset: unset;
+--tk-value-currentcolor: currentColor;
+--tk-value-transparent: transparent;
+--tk-value-0: 0;
+/* Content-based Sizing */
+--tk-value-fit-content: fit-content; /* Size based on content with constraints */
+--tk-value-min-content: min-content; /* Smallest size that fits content */
+--tk-value-max-content: max-content; /* Largest size needed for content */
+
+
+    /* ====================================================================== */
+    /* CURSOR SYSTEM                                                          */
+    /* ====================================================================== */
+
+    /*
+   * Cursor Properties
+   *
+   * These variables define cursor styles for different interactive states.
+   * Cursors provide visual feedback about what the user can do.
+   */
+    --tk-cursor-auto: auto; /* Browser default cursor */
+    --tk-cursor-default: default; /* Default cursor (arrow) */
+    --tk-cursor-pointer: pointer; /* Pointing hand (for links) */
+    --tk-cursor-wait: wait; /* Waiting (hourglass) */
+    --tk-cursor-text: text; /* Text selection (I-beam) */
+    --tk-cursor-move: move; /* Movement indicator */
+    --tk-cursor-not-allowed: not-allowed; /* Forbidden action */
+    --tk-cursor-grab: grab; /* Grabbable element */
+    --tk-cursor-grabbing: grabbing; /* Element being grabbed */
+    --tk-cursor-help: help; /* Help cursor */
+
+
+
+/*
+ * SPACING SYSTEM - 4PX BASED
+ *
+ * A systematic spacing system based on a 4px unit.
+ * This provides consistent spacing with 4px increments for precise layouts.
+ * Scale: 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96, 100
+ */
+    --tk-size-unit: 4px; /* Base unit for spacing system */
+
+    /* Core spacing values */
+    --tk-size-none: var(--tk-value-none);
+    --tk-size-0: var(--tk-value-0);
+    --tk-size-2xs: 0.5px;
+    --tk-size-1: 1px;
+    --tk-size-2: 2px;
+
+    /* --- 4px-Based Systematic Scale --- */
+    --tk-size-4: calc(var(--tk-size-unit) * 1); /* 4px */
+    --tk-size-8: calc(var(--tk-size-unit) * 2); /* 8px */
+    --tk-size-12: calc(var(--tk-size-unit) * 3); /* 12px */
+    --tk-size-16: calc(var(--tk-size-unit) * 4); /* 16px */
+    --tk-size-20: calc(var(--tk-size-unit) * 5); /* 20px */
+    --tk-size-24: calc(var(--tk-size-unit) * 6); /* 24px */
+    --tk-size-28: calc(var(--tk-size-unit) * 7); /* 28px */
+    --tk-size-32: calc(var(--tk-size-unit) * 8); /* 32px */
+    --tk-size-36: calc(var(--tk-size-unit) * 9); /* 36px */
+    --tk-size-40: calc(var(--tk-size-unit) * 10); /* 40px */
+    --tk-size-44: calc(var(--tk-size-unit) * 11); /* 44px */
+    --tk-size-48: calc(var(--tk-size-unit) * 12); /* 48px */
+    --tk-size-52: calc(var(--tk-size-unit) * 13); /* 52px */
+    --tk-size-56: calc(var(--tk-size-unit) * 14); /* 56px */
+    --tk-size-60: calc(var(--tk-size-unit) * 15); /* 60px */
+    --tk-size-64: calc(var(--tk-size-unit) * 16); /* 64px */
+    --tk-size-68: calc(var(--tk-size-unit) * 17); /* 68px */
+    --tk-size-72: calc(var(--tk-size-unit) * 18); /* 72px */
+    --tk-size-76: calc(var(--tk-size-unit) * 19); /* 76px */
+    --tk-size-80: calc(var(--tk-size-unit) * 20); /* 80px */
+    --tk-size-84: calc(var(--tk-size-unit) * 21); /* 84px */
+    --tk-size-88: calc(var(--tk-size-unit) * 22); /* 88px */
+    --tk-size-92: calc(var(--tk-size-unit) * 23); /* 92px */
+    --tk-size-96: calc(var(--tk-size-unit) * 24); /* 96px */
+    --tk-size-100: calc(var(--tk-size-unit) * 25); /* 100px */
+
+
+        /* ====================================================================== */
+    /* SIZING SYSTEM                                                          */
+    /* ====================================================================== */
+
+    /*
+   * Width and Height Properties
+   *
+   * These variables define common sizing values for consistent usage.
+   * Consistent sizing helps maintain a cohesive layout.
+   */
+
+    /* Content-based Sizing */
+    --tk-fit-content: fit-content; /* Size based on content with constraints */
+    --tk-min-content: min-content; /* Smallest size that fits content */
+    --tk-max-content: max-content; /* Largest size needed for content */
+
+    /* Percentage-based Sizing */
+    --tk-size-5p: 5%;
+    --tk-size-10p: 10%;
+    --tk-size-15p: 15%;
+    --tk-size-20p: 20%;
+    --tk-size-25p: 25%;
+    --tk-size-30p: 30%;
+    --tk-size-third: 33.33%; /* Third width of container */
+    --tk-size-35p: 35%;
+    --tk-size-40p: 40%;
+    --tk-size-45p: 45%;
+    --tk-size-50p: 50%;
+    --tk-size-55p: 55%;
+    --tk-size-60p: 60%;
+    --tk-size-65p: 65%;
+    --tk-size-70p: 70%;
+    --tk-size-75p: 75%;
+    --tk-size-80p: 80%;
+    --tk-size-85p: 85%;
+    --tk-size-90p: 90%;
+    --tk-size-95p: 95%;
+    --tk-size-100p: 100%;
+
+    /* Viewport-based Sizing */
+    --tk-size-5vw: 5vw;
+    --tk-size-10vw: 10vw;
+    --tk-size-15vw: 15vw;
+    --tk-size-20vw: 20vw;
+    --tk-size-25vw: 25vw;
+    --tk-size-30vw: 30vw;
+    --tk-size-33vw: 33vw;
+    --tk-size-35vw: 35vw;
+    --tk-size-40vw: 40vw;
+    --tk-size-45vw: 45vw;
+    --tk-size-50vw: 50vw;
+    --tk-size-60vw: 60vw;
+    --tk-size-66vw: 66vw;
+    --tk-size-70vw: 70vw;
+    --tk-size-75vw: 75vw;
+    --tk-size-80vw: 80vw;
+    --tk-size-85vw: 85vw;
+    --tk-size-90vw: 90vw;
+    --tk-size-95vw: 95vw;
+    --tk-size-100vw: 100vw;
+
+    --tk-size-5vh: 5vh;
+    --tk-size-10vh: 10vh;
+    --tk-size-15vh: 15vh;
+    --tk-size-20vh: 20vh;
+    --tk-size-25vh: 25vh;
+    --tk-size-30vh: 30vh;
+    --tk-size-33vh: 33vh;
+    --tk-size-35vh: 35vh;
+    --tk-size-40vh: 40vh;
+    --tk-size-45vh: 45vh;
+    --tk-size-50vh: 50vh;
+    --tk-size-60vh: 60vh;
+    --tk-size-66vh: 66vh;
+    --tk-size-70vh: 70vh;
+    --tk-size-75vh: 75vh;
+    --tk-size-80vh: 80vh;
+    --tk-size-85vh: 85vh;
+    --tk-size-90vh: 90vh;
+    --tk-size-95vh: 95vh;
+    --tk-size-100vh: 100vh;
+
+    /* ====================================================================== */
+    /* ALIGNMENT SYSTEM                                                       */
+    /* ====================================================================== */
+
+    /*
+   * Vertical Alignment Properties
+   *
+   * These variables define vertical alignment values for consistent usage.
+   * Vertical alignment controls how inline or table-cell elements are aligned.
+   */
+
+    /* Basic Vertical Alignment */
+    --tk-align-baseline: baseline; /* Align to text baseline */
+    --tk-align-top: top; /* Align to top */
+    --tk-align-middle: middle; /* Align to middle */
+    --tk-align-bottom: bottom; /* Align to bottom */
+    --tk-align-text-top: text-top; /* Align to top of text */
+    --tk-align-text-bottom: text-bottom; /* Align to bottom of text */
+
+    /* Extended Vertical Alignment */
+    --tk-vertical-align-sub: sub; /* Subscript alignment */
+    --tk-vertical-align-super: super; /* Superscript alignment */
+
+
+
+    /* ====================================================================== */
+    /* TABLE SYSTEM                                                           */
+    /* ====================================================================== */
+
+    /*
+   * Table Properties
+   *
+   * These variables define table layout algorithms for consistent usage.
+   * Table layout affects how tables calculate column widths.
+   */
+    --tk-table-auto: auto; /* Automatic table layout algorithm */
+    --tk-table-fixed: fixed; /* Fixed table layout algorithm */
+    --tk-table-collapse: collapse; /* Collapsed table layout algorithm */
+    --tk-table-separate: separate; /* Separate table layout algorithm */
+    --tk-table-full: 1;
+
+    /* ====================================================================== */
+    /* SVG SYSTEM                                                             */
+    /* ====================================================================== */
+
+    /*
+   * SVG Properties
+   *
+   * These variables define common SVG property values for consistent usage.
+   * These help maintain consistent styling between HTML and SVG elements.
+   */
+    --tk-fill-current: currentColor;
+    --tk-stroke-current: currentColor;
+    --tk-stroke-0: 0px;
+    --tk-stroke-2x: 1px;
+    --tk-stroke-xs: 2px;
+    --tk-stroke-sm: 4px;
+    --tk-stroke-md: 8px;
+    --tk-stroke-lg: 12px;
+    --tk-stroke-xl: 16px;
+    --tk-stroke-xxl: 20px;
+    --tk-stroke-xxxl: 24px;
+
+
+
+
+    /* ====================================================================== */
+    /* MISCELLANEOUS UTILITIES SYSTEM                                         */
+    /* ====================================================================== */
+
+    /*
+   * Appearance Variables
+   *
+   * These variables control the appearance property for form elements.
+   */
+    --tk-appearance-none: none; /* Remove default browser styling */
+    --tk-appearance-auto: auto; /* Use default browser styling */
+
+    /*
+   * Pointer Events Variables
+   *
+   * These variables control pointer event behavior.
+   */
+    --tk-pointer-events-none: none; /* Element cannot be target of pointer events */
+    --tk-pointer-events-auto: auto; /* Element can be target of pointer events */
+
+    /*
+   * Will Change Variables
+   *
+   * These variables provide performance hints to the browser.
+   * Use with caution as they can consume more resources if overused.
+   */
+    --tk-will-change-auto: auto; /* Browser decides what to optimize */
+    --tk-will-change-transform: transform; /* Optimize for transform changes */
+    --tk-will-change-opacity: opacity; /* Optimize for opacity changes */
+    --tk-will-change-scroll: scroll-position; /* Optimize for scroll changes */
+
+    /*
+   * Mask Variables
+   *
+   * These variables define CSS mask gradients for fade effects.
+   */
+    --tk-mask-fade-to-top: linear-gradient(
+        to top,
+        black 50%,
+        transparent 100%
+    );
+    --tk-mask-fade-to-bottom: linear-gradient(
+        to bottom,
+        black 50%,
+        transparent 100%
+    );
+    --tk-mask-fade-to-left: linear-gradient(
+        to left,
+        black 50%,
+        transparent 100%
+    );
+    --tk-mask-fade-to-right: linear-gradient(
+        to right,
+        black 50%,
+        transparent 100%
+    );
+
+    /* Fade intensity variations */
+    --tk-mask-fade-short: linear-gradient(
+        to bottom,
+        black 80%,
+        transparent 100%
+    );
+    --tk-mask-fade-long: linear-gradient(
+        to bottom,
+        black 20%,
+        transparent 100%
+    );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

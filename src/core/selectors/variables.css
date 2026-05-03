@@ -1,0 +1,16 @@
+/* ============================================================================
+ * TOKY CSS — DESIGN TOKENS
+ * ============================================================================
+ * Modularized design tokens utilizing OKLCH and standardized scales.
+ * ============================================================================ */
+
+@import url("../variables/colors.css");
+@import url("../variables/base.css");
+@import url("../variables/layout.css");
+@import url("../variables/border.css");
+@import url("../variables/effects.css");
+@import url("../variables/transforms.css");
+@import url("../variables/typography.css");
+@import url("../variables/animation.css");
+@import url("../variables/theme.css");
+

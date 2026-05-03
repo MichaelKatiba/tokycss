@@ -1,0 +1,495 @@
+/* ── TYPOGRAPHY SCALE ───────────────────────────────────── */
+:root {
+ /*
+ * ======================================================================
+ * FLUID SYSTEM ENGINE (Based on a Major Third scale)
+ * ======================================================================
+ * DO NOT EDIT THIS SECTION.
+ * This engine holds the global configuration and the master calculation
+ * for creating all fluid values (typography, spacing, etc.).
+  /* --- Global Configuration --- */
+  /* Set the viewport widths where fluid scaling should start and stop. */
+  --fluid-min-vw: 480;
+  /* in pixels */
+  --fluid-max-vw: 1440;
+  /* in pixels */
+
+  /* --- Engine Internals (Do Not Modify) --- */
+  /* These variables are used by the master formula. */
+  --fluid-screen-range: calc(var(--fluid-max-vw) - var(--fluid-min-vw));
+  --fluid-rem-factor: calc((100vw - var(--fluid-min-vw) * 1px) / var(--fluid-screen-range));
+
+  /*
+   * FLUID TYPOGRAPHY SYSTEM (Mathematically Corrected)
+   * This system now scales in a perfect linear fashion.
+   */
+
+  /* Min: 0.6875rem (11px) | Max: 0.75rem (12px) */
+--tk-text-xs: clamp(0.6875rem, calc(0.6875rem + (12 - 11) * var(--fluid-rem-factor)), 0.75rem);
+
+/* Min: 0.8125rem (13px) | Max: 0.875rem (14px) */
+--tk-text-sm: clamp(0.8125rem, calc(0.8125rem + (14 - 13) * var(--fluid-rem-factor)), 0.875rem);
+
+/* Min: 0.9375rem (15px) | Max: 1rem (16px) */
+--tk-text-base: clamp(0.9375rem, calc(0.9375rem + (16 - 15) * var(--fluid-rem-factor)), 1rem);
+
+/* Min: 1.0625rem (17px) | Max: 1.125rem (18px) */
+--tk-text-lg: clamp(1.0625rem, calc(1.0625rem + (18 - 17) * var(--fluid-rem-factor)), 1.125rem);
+
+/* Min: 1.1875rem (19px) | Max: 1.25rem (20px) */
+--tk-text-xl: clamp(1.1875rem, calc(1.1875rem + (20 - 19) * var(--fluid-rem-factor)), 1.25rem);
+
+/* Min: 1.375rem (22px) | Max: 1.5rem (24px) */
+--tk-text-2xl: clamp(1.375rem, calc(1.375rem + (24 - 22) * var(--fluid-rem-factor)), 1.5rem);
+
+/* Min: 1.625rem (26px) | Max: 1.875rem (30px) */
+--tk-text-3xl: clamp(1.625rem, calc(1.625rem + (30 - 26) * var(--fluid-rem-factor)), 1.875rem);
+
+/* Min: 2rem (32px) | Max: 2.25rem (36px) */
+--tk-text-4xl: clamp(2rem, calc(2rem + (36 - 32) * var(--fluid-rem-factor)), 2.25rem);
+
+/* Min: 2.5rem (40px) | Max: 3rem (48px) */
+--tk-text-5xl: clamp(2.5rem, calc(2.5rem + (48 - 40) * var(--fluid-rem-factor)), 3rem);
+
+/* Min: 3rem (48px) | Max: 3.5rem (56px) */
+--tk-text-6xl: clamp(3rem, calc(3rem + (56 - 48) * var(--fluid-rem-factor)), 3.5rem);
+
+/* Min: 3.5rem (56px) | Max: 4rem (64px) */
+--tk-text-7xl: clamp(3.5rem, calc(3.5rem + (64 - 56) * var(--fluid-rem-factor)), 4rem);
+
+/* Min: 4rem (64px) | Max: 4.5rem (72px) */
+--tk-text-8xl: clamp(4rem, calc(4rem + (72 - 64) * var(--fluid-rem-factor)), 4.5rem);
+
+/* Min: 4.5rem (72px) | Max: 5rem (80px) */
+--tk-text-9xl: clamp(4.5rem, calc(4.5rem + (80 - 72) * var(--fluid-rem-factor)), 5rem);
+
+
+    /*
+   * Font Weights
+   *
+   * Standard font weight values from 100 (thinnest) to 900 (boldest)
+   * Using consistent naming pattern with descriptive suffixes
+   */
+    --tk-font-weight-100: 100; /* Thinnest */
+    --tk-font-weight-200: 200; /* Extra light */
+    --tk-font-weight-300: 300; /* Light */
+    --tk-font-weight-400: 400; /* Normal/Regular */
+    --tk-font-weight-500: 500; /* Medium */
+    --tk-font-weight-600: 600; /* Semi bold */
+    --tk-font-weight-700: 700; /* Bold */
+    --tk-font-weight-800: 800; /* Extra bold */
+    --tk-font-weight-900: 900; /* Black/Heaviest */
+
+    /*
+   * Font Stretch Properties
+   *
+   * Controls the width of glyphs if the font family has variable widths.
+   * Values represent percentage of normal width.
+   */
+    --tk-font-stretch-ultra-condensed: ultra-condensed; /* 50% */
+    --tk-font-stretch-extra-condensed: extra-condensed; /* 62.5% */
+    --tk-font-stretch-condensed: condensed; /* 75% */
+    --tk-font-stretch-semi-condensed: semi-condensed; /* 87.5% */
+    --tk-font-stretch-normal: var(--tk-value-normal); /* 100% */
+    --tk-font-stretch-semi-expanded: semi-expanded; /* 112.5% */
+    --tk-font-stretch-expanded: expanded; /* 125% */
+    --tk-font-stretch-extra-expanded: extra-expanded; /* 150% */
+    --tk-font-stretch-ultra-expanded: ultra-expanded; /* 200% */
+
+    /*
+   * Font Style Properties
+   *
+   * Standard font style values for consistent usage.
+   */
+    --tk-font-style-normal: var(--tk-value-normal);
+    --tk-font-style-italic: italic;
+
+    /*
+   * Font Variant Numeric Properties
+   *
+   * Controls numeric font features for enhanced typography.
+   */
+    --tk-font-variant-numeric-normal: var(--tk-value-normal);
+    --tk-font-variant-numeric-ordinal: ordinal;
+    --tk-font-variant-numeric-slashed-zero: slashed-zero;
+    --tk-font-variant-numeric-lining-nums: lining-nums;
+    --tk-font-variant-numeric-oldstyle-nums: oldstyle-nums;
+    --tk-font-variant-numeric-proportional-nums: proportional-nums;
+    --tk-font-variant-numeric-tabular-nums: tabular-nums;
+    --tk-font-variant-numeric-diagonal-fractions: diagonal-fractions;
+    --tk-font-variant-numeric-stacked-fractions: stacked-fractions;
+
+    /*
+   * Font Variant Ligatures Properties
+   *
+   * Controls ligature rendering for enhanced typography.
+   */
+    --tk-font-variant-ligatures-common: common-ligatures;
+    --tk-font-variant-ligatures-no-common: no-common-ligatures;
+    --tk-font-variant-ligatures-discretionary: discretionary-ligatures;
+    --tk-font-variant-ligatures-no-discretionary: no-discretionary-ligatures;
+    --tk-font-variant-ligatures-historical: historical-ligatures;
+    --tk-font-variant-ligatures-no-historical: no-historical-ligatures;
+    --tk-font-variant-ligatures-contextual: contextual;
+    --tk-font-variant-ligatures-no-contextual: no-contextual;
+
+    /*
+   * Font Variant Caps Properties
+   *
+   * Controls capitalization rendering for enhanced typography.
+   */
+    --tk-font-variant-caps-normal: var(--tk-value-normal);
+    --tk-font-variant-caps-small-caps: small-caps;
+    --tk-font-variant-caps-all-small-caps: all-small-caps;
+    --tk-font-variant-caps-petite-caps: petite-caps;
+    --tk-font-variant-caps-all-petite-caps: all-petite-caps;
+    --tk-font-variant-caps-unicase: unicase;
+    --tk-font-variant-caps-titling-caps: titling-caps;
+
+    /*
+   * Line Heights
+   *
+   * Line height controls the vertical spacing between lines of text.
+   * - Values below 1.5 are good for headings
+   * - Values 1.5-1.7 are ideal for body text for readability
+   * - Larger values create more spacing for easier reading
+   */
+    --tk-line-height-2xs: 0.55; /* Compact (headings) */
+    --tk-line-height-xs: 1; /* Compact (headings) */
+    --tk-line-height-sm: 1.25; /* Slightly compact */
+    --tk-line-height-md: 1.5; /* Standard body text */
+    --tk-line-height-lg: 1.625; /* Slightly relaxed */
+    --tk-line-height-xl: 2; /* Loose (easy reading) */
+    --tk-line-height-2xl: 0.75rem; /* Fixed line height for small text */
+    --tk-line-height-3xl: 1rem; /* Fixed line height */
+
+    /*
+   * Letter Spacing
+   *
+   * Controls the horizontal spacing between characters.
+   * - Negative values bring letters closer together
+   * - Positive values spread letters apart
+   * - 'em' units scale with the font size
+   */
+    --tk-letter-spacing-2xs: -0.05em; /* Tighter spacing */
+    --tk-letter-spacing-xs: -0.1em; /* Tighter spacing */
+    --tk-letter-spacing-sm: -0.025em; /* Slightly tighter */
+    --tk-letter-spacing-md: 0em; /* Normal spacing */
+    --tk-letter-spacing-lg: 0.025em; /* Slightly wider */
+    --tk-letter-spacing-xl: 0.05em; /* Wider spacing */
+    --tk-letter-spacing-2xl: 0.1em; /* Widest spacing */
+    --tk-letter-spacing-3xl: 0.2em; /* Widest spacing */
+
+    /*
+   * Text Decoration Properties
+   *
+   * Controls the appearance of underlines and other text decorations
+   */
+    --tk-text-underline-offset-auto: var(--tk-value-auto);
+    --tk-text-underline-offset-0: var(--tk-value-0);
+    --tk-text-underline-offset-2xs: 0.5px;
+    --tk-text-underline-offset-xs: 1px;
+    --tk-text-underline-offset-sm: 2px;
+    --tk-text-underline-offset-md: 0.15em;
+    --tk-text-underline-offset-lg: 8px;
+    --tk-text-underline-offset-xl: 10px; /* Default distance between text and underline */
+    --tk-text-underline-offset-2xl: 12px; /* Default distance between text and underline */
+    --tk-text-underline-offset-3xl: 14px; /* Default distance between text and underline */
+
+    --tk-text-underline-auto: var(--tk-value-auto);
+    --tk-text-underline-from-font: from-font;
+    --tk-text-underline-0: 0px;
+    --tk-text-underline-2xs: 1px;
+    --tk-text-underline-xs: 2px;
+    --tk-text-underline-sm: 4px;
+    --tk-text-underline-md: 6px;
+    --tk-text-underline-lg: 8;
+    --tk-text-underline-xl: 10px;
+    --tk-text-underline-2xl: 12px;
+    --tk-text-underline-3xl: 14px;
+
+    --tk-text-underline-style-none: none;
+    --tk-text-underline-style-solid: solid;
+    --tk-text-underline-style-double: double;
+    --tk-text-underline-style-dotted: dotted;
+    --tk-text-underline-style-dashed: dashed;
+    --tk-text-underline-style-wavy: wavy;
+
+    --tk-text-underline-position-auto: var(--tk-value-auto);
+    --tk-text-underline-position-under: under;
+    --tk-text-underline-position-left: left;
+    --tk-text-underline-position-right: right;
+
+    /*
+   * Text Transform Properties
+   *
+   * Controls text case transformation
+   */
+    --tk-text-transform-uppercase: uppercase;
+    --tk-text-transform-lowercase: lowercase;
+    --tk-text-transform-capitalize: capitalize;
+    --tk-text-transform-none: var(--tk-value-none);
+
+    /*
+   * Text Alignment Properties
+   *
+   * These variables define text alignment values for consistent usage.
+   */
+    --tk-text-align-left: left;
+    --tk-text-align-center: center;
+    --tk-text-align-right: right;
+    --tk-text-align-justify: justify;
+    --tk-text-align-start: start;
+    --tk-text-align-end: end;
+
+    /*
+   * Text Overflow Properties
+   *
+   * Controls how overflowing text is handled
+   */
+    --tk-text-overflow-ellipsis: ellipsis;
+    --tk-text-overflow-clip: clip;
+
+    /*
+   * White Space Properties
+   *
+   * Controls how whitespace is handled
+   */
+    --tk-whitespace-normal: var(--tk-value-normal);
+    --tk-whitespace-nowrap: nowrap;
+    --tk-whitespace-pre: pre;
+    --tk-whitespace-pre-line: pre-line;
+    --tk-whitespace-pre-wrap: pre-wrap;
+    --tk-whitespace-break-spaces: break-spaces;
+
+    /*
+   * Text Indent Properties
+   *
+   * Controls the indentation of the first line of text
+   */
+    --tk-indent-0: var(--tk-value-0);
+    --tk-indent-2xs: 0.0325rem;
+    --tk-indent-xs: 0.0625rem;
+    --tk-indent-sm: 0.25rem;
+    --tk-indent-md: 0.5rem;
+    --tk-indent-lg: 1rem;
+    --tk-indent-xl: 2rem;
+    --tk-indent-2xl: 2.5rem;
+    --tk-indent-3xl: 3rem;
+
+    /*
+   * Text Shadow Properties
+   *
+   * Controls text shadow effects
+   */
+    --tk-text-shadow-none: var(--tk-value-none);
+    --tk-text-shadow-2xs: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    --tk-text-shadow-xs: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    --tk-text-shadow-sm: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    --tk-text-shadow-md: 4px 4px 6px rgba(0, 0, 0, 0.1);
+    --tk-text-shadow-lg: 6px 6px 8px rgba(0, 0, 0, 0.15);
+    --tk-text-shadow-xl: 8px 8px 10px rgba(0, 0, 0, 0.15);
+    --tk-text-shadow-2xl: 10px 10px 12px rgba(0, 0, 0, 0.15);
+    --tk-text-shadow-3xl: 12px 12px 14px rgba(0, 0, 0, 0.15);
+
+    /*
+   * Text Stroke Properties
+   * Controls text stroke (outline) effects
+   */
+    --tk-text-stroke-2xs: 1px;
+    --tk-text-stroke-xs: 2px;
+    --tk-text-stroke-sm: 4px;
+    --tk-text-stroke-md: 8px;
+    --tk-text-stroke-lg: 12px;
+    --tk-text-stroke-xl: 16px;
+    --tk-text-stroke-2xl: 20px;
+    --tk-text-stroke-3xl: 24px;
+
+    /*
+   * List Style Properties
+   *
+   * Controls list styling
+   */
+    --tk-list-style-type-none: var(--tk-value-none);
+    --tk-list-style-type-disc: disc;
+    --tk-list-style-type-decimal: decimal;
+    --tk-list-style-type-square: square;
+    --tk-list-style-type-upper-roman: upper-roman;
+    --tk-list-style-type-lower-roman: lower-roman;
+    --tk-list-style-type-upper-alpha: upper-alpha;
+    --tk-list-style-type-lower-alpha: lower-alpha;
+
+    --tk-list-style-position-inside: inside;
+    --tk-list-style-position-outside: outside;
+
+    /*
+   * Text Direction Properties
+   *
+   * Controls text direction for internationalization
+   */
+    --tk-text-direction-ltr: ltr;
+    --tk-text-direction-rtl: rtl;
+
+    /*
+   * Writing Mode Properties
+   *
+   * Controls text writing direction
+   */
+    --tk-writing-mode-horizontal-tb: horizontal-tb;
+    --tk-writing-mode-vertical-rl: vertical-rl;
+    --tk-writing-mode-vertical-lr: vertical-lr;
+    --tk-writing-mode-sideways-rl: sideways-rl;
+    --tk-writing-mode-sideways-lr: sideways-lr;
+
+    /*
+   * Text Orientation Properties
+   *
+   * Controls text orientation in vertical writing modes
+   */
+    --tk-text-orientation-mixed: mixed;
+    --tk-text-orientation-upright: upright;
+    --tk-text-orientation-sideways: sideways;
+
+    /*
+   * Hyphens Properties
+   *
+   * Controls automatic hyphenation
+   */
+    --tk-hyphens-none: var(--tk-value-none);
+    --tk-hyphens-manual: manual;
+    --tk-hyphens-auto: var(--tk-value-auto);
+
+    /*
+   * Text Align Last Properties
+   *
+   * Controls alignment of the last line in a block
+   */
+    --tk-text-align-last-auto: var(--tk-value-auto);
+    --tk-text-align-last-start: start;
+    --tk-text-align-last-end: end;
+    --tk-text-align-last-left: left;
+    --tk-text-align-last-right: right;
+    --tk-text-align-last-center: center;
+    --tk-text-align-last-justify: justify;
+
+    /*
+   * Text Justify Properties
+   *
+   * Controls how justified text is spaced
+   */
+    --tk-text-justify-auto: var(--tk-value-auto);
+    --tk-text-justify-inter-word: inter-word;
+    --tk-text-justify-inter-character: inter-character;
+    --tk-text-justify-none: var(--tk-value-none);
+
+    /*
+   * User Select Properties
+   *
+   * Controls whether text can be selected
+   */
+    --tk-user-select-none: var(--tk-value-none);
+    --tk-user-select-text: text;
+    --tk-user-select-all: all;
+    --tk-user-select-auto: var(--tk-value-auto);
+
+    /*
+   * Word Break Properties
+   *
+   * Controls how words break at line endings
+   */
+    --tk-word-break-normal: var(--tk-value-normal);
+    --tk-word-break-break-all: break-all;
+    --tk-word-break-keep-all: keep-all;
+    --tk-overflow-wrap-normal: var(--tk-value-normal);
+    --tk-overflow-wrap-break-word: break-word;
+
+    /*
+ *Text Wrap
+ */
+    --tk-text-wrap-balance: balance;
+    --tk-text-wrap-pretty: pretty;
+    --tk-text-wrap-stable: stable;
+
+
+    /* ====================================================================== */
+    /* BACKGROUND SYSTEM                                                       */
+    /* ====================================================================== */
+
+    /*
+   * Background Properties
+   *
+   * These variables define common background property values for consistent usage.
+   * Background properties control how backgrounds are displayed.
+   */
+
+    /* Background Repeat */
+    --tk-bg-none: none; /* No background image */
+    --tk-bg-repeat: repeat; /* Repeat in both directions */
+    --tk-bg-no-repeat: no-repeat; /* No repetition */
+    --tk-bg-repeat-x: repeat-x; /* Repeat horizontally only */
+    --tk-bg-repeat-y: repeat-y; /* Repeat vertically only */
+
+    /* Background Attachment */
+    --tk-bg-fixed: fixed; /* Fixed to viewport */
+    --tk-bg-local: local; /* Scrolls with content */
+    --tk-bg-scroll: scroll; /* Scrolls with element */
+
+    /* Background Clip */
+    --tk-bg-clip-border: border-box; /* Extend to outer border edge */
+    --tk-bg-clip-padding: padding-box; /* Extend to outer padding edge */
+    --tk-bg-clip-content: content-box; /* Extend to content edge */
+
+    /* Background Position */
+    --tk-bg-position-center: center; /* Center alignment */
+    --tk-bg-position-top: top; /* Top alignment */
+    --tk-bg-position-bottom: bottom; /* Bottom alignment */
+    --tk-bg-position-left: left; /* Left alignment */
+    --tk-bg-position-right: right; /* Right alignment */
+
+    /* Background Size */
+    --tk-bg-size-cover: cover; /* Cover the area */
+    --tk-bg-size-contain: contain; /* Contain the area */
+
+    /* Background Origin */
+    --tk-bg-origin-border: border-box; /* Extend to outer border edge */
+    --tk-bg-origin-padding: padding-box; /* Extend to outer padding edge */
+    --tk-bg-origin-content: content-box; /* Extend to content edge */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+}

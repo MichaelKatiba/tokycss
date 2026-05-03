@@ -1,0 +1,137 @@
+/* ══════════════════════════════════════════════════════════════════════════
+   SEMANTIC TOKENS - Using CSS light-dark() for automatic theme switching
+   
+   This approach mimics Radix UI's color system:
+   - light-dark() automatically picks the right value based on color-scheme
+   - Single definition, no duplication
+   - Manual overrides still work via [data-theme] attribute
+   
+   Mapping strategy (Radix-inspired):
+   - Light mode: backgrounds use TINTS, foregrounds use SHADES
+   - Dark mode: backgrounds use SHADES, foregrounds use TINTS
+   ══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Enable light-dark() function */
+  color-scheme: light dark;
+
+  /* ── BACKGROUNDS ────────────────────────────────────────────────────────
+     Layered surface system: page → surface → subtle → muted → emphasis
+     ──────────────────────────────────────────────────────────────────────── */
+  --tk-bg-page: light-dark(var(--tk-color-neutral-5xlight), var(--tk-color-neutral-5xdark));
+  --tk-bg-surface: light-dark(oklch(0.995 0 0), var(--tk-color-neutral-4xdark));
+  --tk-bg-subtle: light-dark(var(--tk-color-neutral-4xlight), var(--tk-color-neutral-3xdark));
+  --tk-bg-muted: light-dark(var(--tk-color-neutral-3xlight), var(--tk-color-neutral-2xdark));
+  --tk-bg-emphasis: light-dark(var(--tk-color-neutral-2xlight), var(--tk-color-neutral-1xdark));
+  --tk-bg-overlay: light-dark(var(--tk-color-neutral-7a), oklch(0 0 0 / 0.75));
+
+  /* Interactive backgrounds */
+  --tk-bg-primary: var(--tk-color-primary);
+  --tk-bg-primary-subtle: light-dark(var(--tk-color-primary-4xlight), var(--tk-color-primary-4xdark));
+  --tk-bg-primary-muted: light-dark(var(--tk-color-primary-3xlight), var(--tk-color-primary-3xdark));
+
+  --tk-bg-secondary: var(--tk-color-secondary);
+  --tk-bg-secondary-subtle: light-dark(var(--tk-color-secondary-4xlight), var(--tk-color-secondary-4xdark));
+  --tk-bg-secondary-muted: light-dark(var(--tk-color-secondary-3xlight), var(--tk-color-secondary-3xdark));
+
+  --tk-bg-accent: var(--tk-color-accent);
+  --tk-bg-accent-subtle: light-dark(var(--tk-color-accent-4xlight), var(--tk-color-accent-4xdark));
+  --tk-bg-accent-muted: light-dark(var(--tk-color-accent-3xlight), var(--tk-color-accent-3xdark));
+
+  /* Status backgrounds */
+  --tk-bg-success: light-dark(var(--tk-color-success-4xlight), var(--tk-color-success-4xdark));
+  --tk-bg-warning: light-dark(var(--tk-color-warning-4xlight), var(--tk-color-warning-4xdark));
+  --tk-bg-danger: light-dark(var(--tk-color-danger-4xlight), var(--tk-color-danger-4xdark));
+  --tk-bg-info: light-dark(var(--tk-color-info-4xlight), var(--tk-color-info-4xdark));
+
+  /* ── FOREGROUNDS (Text/Icons) ────────────────────────────────────────────
+     Layered text system: default → muted → subtle → disabled
+     ──────────────────────────────────────────────────────────────────────── */
+  --tk-fg-default: light-dark(var(--tk-color-neutral-5xdark), var(--tk-color-neutral-5xlight));
+  --tk-fg-muted: light-dark(var(--tk-color-neutral-3xdark), var(--tk-color-neutral-3xlight));
+  --tk-fg-subtle: light-dark(var(--tk-color-neutral-2xdark), var(--tk-color-neutral-2xlight));
+  --tk-fg-disabled: light-dark(var(--tk-color-neutral-1xdark), var(--tk-color-neutral-1xlight));
+
+  /* Brand foregrounds */
+  --tk-fg-primary: light-dark(var(--tk-color-primary-2xdark), var(--tk-color-primary-2xlight));
+  --tk-fg-secondary: light-dark(var(--tk-color-secondary-2xdark), var(--tk-color-secondary-2xlight));
+  --tk-fg-accent: light-dark(var(--tk-color-accent-3xdark), var(--tk-color-accent-2xlight));
+
+  /* Status foregrounds */
+  --tk-fg-success: light-dark(var(--tk-color-success-2xdark), var(--tk-color-success-2xlight));
+  --tk-fg-warning: light-dark(var(--tk-color-warning-3xdark), var(--tk-color-warning-2xlight));
+  --tk-fg-danger: light-dark(var(--tk-color-danger-2xdark), var(--tk-color-danger-2xlight));
+  --tk-fg-info: light-dark(var(--tk-color-info-2xdark), var(--tk-color-info-2xlight));
+
+  /* ── CONTRAST GUARDS (Text on solid backgrounds) ─────────────────────────
+     These ensure readable text on brand/status colored backgrounds.
+     
+     THRESHOLD-BASED APPROACH:
+     Instead of a continuous formula that creates gray text in the middle range,
+     we use a threshold switch that gives either white OR black text.
+     
+     - Lightness < 0.6 → White text (oklch(0.98 0.01 h) - near-white with hint of brand)
+     - Lightness >= 0.6 → Dark text (oklch(0.15 0.01 h) - near-black with hint of brand)
+     
+     This avoids the "gray zone" (0.51-0.58) where contrast was poor.
+     ──────────────────────────────────────────────────────────────────────── */
+  --tk-fg-on-primary: oklch(0.98 0.01 265);
+  --tk-fg-on-secondary: oklch(0.98 0.01 190);
+  --tk-fg-on-accent: oklch(0.15 0.01 80);
+  --tk-fg-on-success: oklch(0.98 0.01 145);
+  --tk-fg-on-warning: oklch(0.15 0.01 85);
+  --tk-fg-on-danger: oklch(0.98 0.01 25);
+  --tk-fg-on-info: oklch(0.98 0.01 210);
+
+  /* Enhanced contrast guards with relative color syntax support */
+  @supports (color: oklch(from red l c h)) {
+    /* Primary: l=0.55 < 0.6 → white text */
+    --tk-fg-on-primary: oklch(from var(--tk-primary) 0.98 0.01 h);
+    /* Secondary: l=0.60 >= 0.6 → dark text */
+    --tk-fg-on-secondary: oklch(from var(--tk-secondary) 0.15 0.01 h);
+    /* Accent: l=0.80 >= 0.6 → dark text */
+    --tk-fg-on-accent: oklch(from var(--tk-accent) 0.15 0.01 h);
+  }
+
+  /* ── BORDERS ─────────────────────────────────────────────────────────────
+     Layered border system matching background hierarchy
+     ──────────────────────────────────────────────────────────────────────── */
+  --tk-border-subtle: light-dark(var(--tk-color-neutral-5xlight), var(--tk-color-neutral-4xdark));
+  --tk-border-muted: light-dark(var(--tk-color-neutral-4xlight), var(--tk-color-neutral-3xdark));
+  --tk-border-default: light-dark(var(--tk-color-neutral-3xlight), var(--tk-color-neutral-2xdark));
+  --tk-border-strong: light-dark(var(--tk-color-neutral-2xlight), var(--tk-color-neutral-1xdark));
+  --tk-border-emphasis: light-dark(var(--tk-color-neutral-1xlight), var(--tk-color-neutral-1xdark));
+
+  /* Interactive borders */
+  --tk-border-primary: var(--tk-color-primary);
+  --tk-border-secondary: var(--tk-color-secondary);
+  --tk-border-accent: var(--tk-color-accent);
+
+  /* Status borders */
+  --tk-border-success: var(--tk-color-success);
+  --tk-border-warning: var(--tk-color-warning);
+  --tk-border-danger: var(--tk-color-danger);
+  --tk-border-info: var(--tk-color-info);
+
+  /* ── FOCUS & INTERACTION ─────────────────────────────────────────────────*/
+  --tk-focus-ring: var(--tk-color-primary);
+  --tk-focus-ring-offset: var(--tk-bg-surface);
+}
+
+
+/* ══════════════════════════════════════════════════════════════════════════
+   MANUAL THEME OVERRIDES
+   
+   These override the automatic light-dark() behavior when user explicitly
+   selects a theme via data-theme attribute.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* Force light mode */
+[data-theme="light"] {
+  color-scheme: light;
+}
+
+/* Force dark mode */
+[data-theme="dark"] {
+  color-scheme: dark;
+}
