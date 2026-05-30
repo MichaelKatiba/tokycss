@@ -11,91 +11,99 @@
    * Filters can be combined to create complex visual effects.
    */
     --tk-filter-blur-0: blur(0px);
-    --tk-filter-blur-2xs: blur(1px);
-    --tk-filter-blur-xs: blur(2px);
-    --tk-filter-blur-sm: blur(4px);
-    --tk-filter-blur-md: blur(8px);
-    --tk-filter-blur-lg: blur(12px);
-    --tk-filter-blur-xl: blur(16px);
-    --tk-filter-blur-2xl: blur(20px);
-    --tk-filter-blur-3xl: blur(24px);
+    --tk-filter-blur-1x: blur(1px);
+    --tk-filter-blur-2x: blur(2px);
+    --tk-filter-blur-3x: blur(4px);
+    --tk-filter-blur-4x: blur(8px);
+    --tk-filter-blur-5x: blur(12px);
+    --tk-filter-blur-6x: blur(16px);
+    --tk-filter-blur-7x: blur(20px);
+    --tk-filter-blur-8x: blur(24px);
+    --tk-filter-blur-9x: blur(24px);
     --tk-filter-blur-full: blur(100px);
 
     --tk-filter-brightness-0: brightness(0);
-    --tk-filter-brightness-2xs: brightness(1.5);
-    --tk-filter-brightness-xs: brightness(1.5);
-    --tk-filter-brightness-sm: brightness(1.5);
-    --tk-filter-brightness-md: brightness(1.5);
-    --tk-filter-brightness-lg: brightness(1.5);
-    --tk-filter-brightness-xl: brightness(1.5);
-    --tk-filter-brightness-2xl: brightness(1.5);
-    --tk-filter-brightness-3xl: brightness(1.5);
+    --tk-filter-brightness-1x: brightness(1.5);
+    --tk-filter-brightness-2x: brightness(1.5);
+    --tk-filter-brightness-3x: brightness(1.5);
+    --tk-filter-brightness-4x: brightness(1.5);
+    --tk-filter-brightness-5x: brightness(1.5);
+    --tk-filter-brightness-6x: brightness(1.5);
+    --tk-filter-brightness-7x: brightness(1.5);
+    --tk-filter-brightness-8x: brightness(1.5);
+    --tk-filter-brightness-9x: brightness(1.5);
     --tk-filter-brightness-full: brightness(1.5);
 
     --tk-filter-contrast-0: contrast(1.2);
-    --tk-filter-contrast-2xs: contrast(1.2);
-    --tk-filter-contrast-xs: contrast(1.2);
-    --tk-filter-contrast-sm: contrast(1.2);
-    --tk-filter-contrast-md: contrast(1.2);
-    --tk-filter-contrast-lg: contrast(1.2);
-    --tk-filter-contrast-xl: contrast(1.2);
-    --tk-filter-contrast-2xl: contrast(1.2);
-    --tk-filter-contrast-3xl: contrast(1.2);
+    --tk-filter-contrast-1x: contrast(1.2);
+    --tk-filter-contrast-2x: contrast(1.2);
+    --tk-filter-contrast-3x: contrast(1.2);
+    --tk-filter-contrast-4x: contrast(1.2);
+    --tk-filter-contrast-5x: contrast(1.2);
+    --tk-filter-contrast-6x: contrast(1.2);
+    --tk-filter-contrast-7x: contrast(1.2);
+    --tk-filter-contrast-8x: contrast(1.2);
+    --tk-filter-contrast-9x: contrast(1.2);
     --tk-filter-contrast-full: contrast(1.2);
 
     --tk-filter-grayscale-0: grayscale(100%);
-    --tk-filter-grayscale-2xs: grayscale(100%);
-    --tk-filter-grayscale-xs: grayscale(100%);
-    --tk-filter-grayscale-sm: grayscale(100%);
-    --tk-filter-grayscale-md: grayscale(100%);
-    --tk-filter-grayscale-lg: grayscale(100%);
-    --tk-filter-grayscale-xl: grayscale(100%);
-    --tk-filter-grayscale-2xl: grayscale(100%);
-    --tk-filter-grayscale-3xl: grayscale(100%);
+    --tk-filter-grayscale-1x: grayscale(100%);
+    --tk-filter-grayscale-2x: grayscale(100%);
+    --tk-filter-grayscale-3x: grayscale(100%);
+    --tk-filter-grayscale-4x: grayscale(100%);
+    --tk-filter-grayscale-5x: grayscale(100%);
+    --tk-filter-grayscale-6x: grayscale(100%);
+    --tk-filter-grayscale-7x: grayscale(100%);
+    --tk-filter-grayscale-8x: grayscale(100%);
+    --tk-filter-grayscale-9x: grayscale(100%);
     --tk-filter-grayscale-full: grayscale(100%);
 
     --tk-filter-hue-rotate-0: hue-rotate(90deg);
-    --tk-filter-hue-rotate-2xs: hue-rotate(90deg);
-    --tk-filter-hue-rotate-xs: hue-rotate(90deg);
-    --tk-filter-hue-rotate-sm: hue-rotate(90deg);
-    --tk-filter-hue-rotate-md: hue-rotate(90deg);
-    --tk-filter-hue-rotate-lg: hue-rotate(90deg);
-    --tk-filter-hue-rotate-xl: hue-rotate(90deg);
-    --tk-filter-hue-rotate-2xl: hue-rotate(90deg);
-    --tk-filter-hue-rotate-3xl: hue-rotate(90deg);
+    --tk-filter-hue-rotate-1x: hue-rotate(90deg);
+    --tk-filter-hue-rotate-2x: hue-rotate(90deg);
+    --tk-filter-hue-rotate-3x: hue-rotate(90deg);
+    --tk-filter-hue-rotate-4x: hue-rotate(90deg);
+    --tk-filter-hue-rotate-5x: hue-rotate(90deg);
+    --tk-filter-hue-rotate-6x: hue-rotate(90deg);
+    --tk-filter-hue-rotate-7x: hue-rotate(90deg);
+    --tk-filter-hue-rotate-8x: hue-rotate(90deg);
+    --tk-filter-hue-rotate-9x: hue-rotate(90deg);
     --tk-filter-hue-rotate-full: hue-rotate(90deg);
 
     --tk-filter-invert-0: invert(100%);
-    --tk-filter-invert-2xs: invert(100%);
-    --tk-filter-invert-xs: invert(100%);
-    --tk-filter-invert-sm: invert(100%);
-    --tk-filter-invert-md: invert(100%);
-    --tk-filter-invert-lg: invert(100%);
-    --tk-filter-invert-xl: invert(100%);
-    --tk-filter-invert-2xl: invert(100%);
-    --tk-filter-invert-3xl: invert(100%);
+    --tk-filter-invert-1x: invert(100%);
+    --tk-filter-invert-2x: invert(100%);
+    --tk-filter-invert-3x: invert(100%);
+    --tk-filter-invert-4x: invert(100%);
+    --tk-filter-invert-5x: invert(100%);
+    --tk-filter-invert-6x: invert(100%);
+    --tk-filter-invert-7x: invert(100%);
+    --tk-filter-invert-8x: invert(100%);
+    --tk-filter-invert-9x: invert(100%);
     --tk-filter-invert-full: invert(100%);
 
     --tk-filter-saturate-0: saturate(2);
-    --tk-filter-saturate-2xs: saturate(2);
-    --tk-filter-saturate-xs: saturate(2);
-    --tk-filter-saturate-sm: saturate(2);
-    --tk-filter-saturate-md: saturate(2);
-    --tk-filter-saturate-lg: saturate(2);
-    --tk-filter-saturate-xl: saturate(2);
-    --tk-filter-saturate-2xl: saturate(2);
-    --tk-filter-saturate-3xl: saturate(2);
+    --tk-filter-saturate-1x: saturate(2);
+    --tk-filter-saturate-2x: saturate(2);
+    --tk-filter-saturate-3x: saturate(2);
+    --tk-filter-saturate-4x: saturate(2);
+    --tk-filter-saturate-5x: saturate(2);
+    --tk-filter-saturate-6x: saturate(2);
+    --tk-filter-saturate-7x: saturate(2);
+    --tk-filter-saturate-8x: saturate(2);
+    --tk-filter-saturate-9x: saturate(2);
     --tk-filter-saturate-full: saturate(2);
 
     --tk-filter-sepia-0: sepia(0%);
-    --tk-filter-sepia-2xs: sepia(100%);
-    --tk-filter-sepia-xs: sepia(100%);
-    --tk-filter-sepia-sm: sepia(100%);
-    --tk-filter-sepia-md: sepia(100%);
-    --tk-filter-sepia-lg: sepia(100%);
-    --tk-filter-sepia-xl: sepia(100%);
-    --tk-filter-sepia-2xl: sepia(100%);
-    --tk-filter-sepia-3xl: sepia(100%);
+    --tk-filter-sepia-1x: sepia(10%);
+    --tk-filter-sepia-2x: sepia(20%);
+    --tk-filter-sepia-3x: sepia(30%);
+    --tk-filter-sepia-4x: sepia(40%);
+    --tk-filter-sepia-5x: sepia(50%);
+    --tk-filter-sepia-6x: sepia(60%);
+    --tk-filter-sepia-7x: sepia(70%);
+    --tk-filter-sepia-8x: sepia(80%);
+    --tk-filter-sepia-9x: sepia(90%);
     --tk-filter-sepia-full: sepia(100%);
 
     /* ====================================================================== */
@@ -108,16 +116,18 @@
    * These variables define standard opacity values for consistent usage.
    * Opacity controls the transparency of elements.
    */
-    --tk-opacity-0p: 0;
-    --tk-opacity-2xs: 0.1;
-    --tk-opacity-xs: 0.5;
-    --tk-opacity-sm: 0.15;
-    --tk-opacity-md: 0.3;
-    --tk-opacity-lg: 0.5;
-    --tk-opacity-xl: 0.7;
-    --tk-opacity-2xl: 0.8;
-    --tk-opacity-3xl: 0.95;
-    --tk-opacity-full: 1;
+   /* Opacity scale */
+   
+   --tk-opacity-1x: 0.1;
+   --tk-opacity-2x: 0.2;
+   --tk-opacity-3x: 0.3;
+   --tk-opacity-4x: 0.4;
+   --tk-opacity-5x: 0.5;
+   --tk-opacity-6x: 0.6;
+   --tk-opacity-7x: 0.7;
+   --tk-opacity-8x: 0.8;
+   --tk-opacity-9x: 0.9;
+   --tk-opacity-full: 1;
 
 
 

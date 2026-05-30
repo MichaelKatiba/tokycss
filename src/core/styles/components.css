@@ -28,20 +28,7 @@ input[type="reset"],
     transform var(--tk-duration-slow) var(--tk-easing);
 }
 
-:where(form, fieldset, [role="group"]) button:not([data-variant]),
-input[type="submit"],
-[role="button"] {
-  background-color: var(--tk-color-primary);
-  color: var(--tk-fg-on-primary);
-}
-
-:where(form, fieldset, [role="group"]) button:not([data-variant]):hover,
-input[type="submit"]:hover,
-[role="button"]:hover {
-  background-color: var(--tk-color-primary-1xdark);
-}
-
-:where(form, fieldset, [role="group"]) button:not([data-variant]):active,
+:where(form, fieldset, [role="group"]) button:active,
 input[type="submit"]:active,
 [role="button"]:active {
   transform: scale(0.97);
@@ -53,7 +40,7 @@ input[type="button"]:disabled,
 [role="button"][aria-disabled="true"] {
   opacity: 0.5;
   cursor: not-allowed;
-  transform: none !important;
+  transform: none;
 }
 
 /* Table */
@@ -66,7 +53,7 @@ table {
 
 thead {
   background-color: var(--tk-color-neutral-4xlight);
-  border-bottom: 2px solid var(--tk-border-default);
+  border-bottom: 2px solid var(--tk-border);
 }
 
 th {
@@ -75,13 +62,13 @@ th {
   font-size: var(--tk-text-xs);
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--tk-fg-muted);
+  color: var(--tk-fg-2x);
 }
 
 td {
   padding: var(--tk-size-4) var(--tk-size-12);
-  color: var(--tk-fg-default);
-  border-bottom: 1px solid var(--tk-border-muted);
+  color: var(--tk-fg-5x);
+  border-bottom: 1px solid var(--tk-bg-2x);
 }
 
 tbody tr {
@@ -89,7 +76,7 @@ tbody tr {
 }
 
 tbody tr:hover {
-  background-color: var(--tk-color-neutral-2a);
+  background-color: var(--tk-color-theme-2a);
 }
 
 tbody tr:last-child td {
@@ -99,7 +86,7 @@ tbody tr:last-child td {
 caption {
   padding: var(--tk-size-4) var(--tk-size-12);
   font-size: var(--tk-text-sm);
-  color: var(--tk-fg-subtle);
+  color: var(--tk-fg-4x);
   text-align: left;
   caption-side: bottom;
 }
@@ -109,9 +96,9 @@ dialog {
   border: none;
   border-radius: var(--tk-radius-4);
   padding: var(--tk-size-48);
-  background-color: var(--tk-bg-surface);
-  color: var(--tk-fg-default);
-  box-shadow: var(--tk-shadow-lg);
+  background-color: var(--tk-bg-4x);
+  color: var(--tk-fg-4x);
+  box-shadow: var(--tk-color-shadow-lg);
   max-width: min(90vw, 32rem);
   width: 100%;
   position: fixed;
@@ -120,7 +107,7 @@ dialog {
 }
 
 dialog::backdrop {
-  background: var(--tk-bg-overlay);
+  background: var(--tk-color-theme-7a);
   backdrop-filter: blur(4px);
 }
 
@@ -150,11 +137,11 @@ nav ul {
 nav a {
   display: flex;
   align-items: center;
-  gap: var(--tk-size-2);
+  gap: var(--tk-size-4);
   padding: var(--tk-size-2) var(--tk-size-4);
   font-size: var(--tk-text-sm);
   font-weight: 500;
-  color: var(--tk-fg-muted);
+  color: var(--tk-fg-2x);
   border-radius: var(--tk-size-8);
   text-decoration: none;
   transition:
@@ -163,8 +150,8 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--tk-fg-default);
-  background-color: var(--tk-color-neutral-3a);
+  color: var(--tk-fg-5x);
+  background-color: var(--tk-color-theme-3a);
 }
 
 nav a[aria-current="page"],
@@ -172,66 +159,4 @@ nav a[aria-current="true"] {
   color: var(--tk-color-primary-1xdark);
   background-color: var(--tk-color-primary-2a);
   font-weight: 600;
-}
-
-/* Header */
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: var(--tk-size-20) var(--tk-size-20);
-  border-bottom: 1px solid var(--tk-border-muted);
-  background-color: color-mix(in oklch, var(--tk-bg-surface) 80%, transparent);
-  backdrop-filter: blur(12px) saturate(1.5);
-  position: sticky;
-  top: 0;
-  z-index: 1100;
-}
-
-header > * {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-header > * nav ul{
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-}
-
-header > * nav ul li a{
-    font-size: var(--tk-font-size-xs);
-    text-decoration: none;
-}
-
-
-main {
-  margin-inline: auto;
-  padding: var(--tk-size-48) var(--tk-size-12);
-}
-
-section:first-child {
-    padding-block-start: var(--tk-size-80);
-}
-section {
-    padding-block: var(--tk-size-64);
-}
-
-body>footer {
-  padding: var(--tk-size-48) var(--tk-size-12);
-  border-top: 1px solid var(--tk-border-muted);
-  color: var(--tk-fg-subtle);
-  font-size: var(--tk-text-sm);
-  text-align: center;
-}
-
-aside {
-  padding: var(--tk-size-24);
-  background-color: var(--tk-bg-subtle);
-  border-radius: var(--tk-size-4);
-  border: 1px solid var(--tk-border-muted);
-  font-size: var(--tk-text-sm);
-  color: var(--tk-fg-muted);
-  margin-block-end: var(--tk-size-32);
 }

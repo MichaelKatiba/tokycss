@@ -13,8 +13,8 @@
     --tk-color-accent: oklch(0.80 0.18 80);
 
     /* Neutral hue — tints grays toward your brand */
-    --tk-color-neutral: oklch(66.66% 0.03151 259.611); 
     --tk-color-theme: oklch(86.66% 0.03151 259.611); 
+    --tk-color-neutral: oklch(66.66% 0.03151 259.611); 
     
 
     /* 🔤 TYPOGRAPHY */
@@ -28,6 +28,15 @@
     --tk-font-heading: "Inter" , var(var(--tk-font-sans));
     --tk-font-body: "Inter" , var(var(--tk-font-serif));
     --tk-font-num: Consolas , var(var(--tk-font-mono));
+
+    --tk-page-gutter: var(--tk-size-20);
+    --tk-content-width: 80ch;
+    --tk-content-fill-width: 90ch;
+
+    /* Set the viewport widths where fluid scaling should start and stop. 
+    Enter viewport widths without the 'px' unit. */
+    --tk-fluid-scale-start: 480;
+    --tk-fluid-scale-end: 1440;
 
   }
 }

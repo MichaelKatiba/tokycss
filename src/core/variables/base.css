@@ -120,7 +120,6 @@
     --tk-size-20p: 20%;
     --tk-size-25p: 25%;
     --tk-size-30p: 30%;
-    --tk-size-third: 33.33%; /* Third width of container */
     --tk-size-35p: 35%;
     --tk-size-40p: 40%;
     --tk-size-45p: 45%;
@@ -239,8 +238,8 @@
     --tk-stroke-md: 8px;
     --tk-stroke-lg: 12px;
     --tk-stroke-xl: 16px;
-    --tk-stroke-xxl: 20px;
-    --tk-stroke-xxxl: 24px;
+    --tk-stroke-2xl: 20px;
+    --tk-stroke-3xl: 24px;
 
 
 
@@ -275,59 +274,4 @@
     --tk-will-change-transform: transform; /* Optimize for transform changes */
     --tk-will-change-opacity: opacity; /* Optimize for opacity changes */
     --tk-will-change-scroll: scroll-position; /* Optimize for scroll changes */
-
-    /*
-   * Mask Variables
-   *
-   * These variables define CSS mask gradients for fade effects.
-   */
-    --tk-mask-fade-to-top: linear-gradient(
-        to top,
-        black 50%,
-        transparent 100%
-    );
-    --tk-mask-fade-to-bottom: linear-gradient(
-        to bottom,
-        black 50%,
-        transparent 100%
-    );
-    --tk-mask-fade-to-left: linear-gradient(
-        to left,
-        black 50%,
-        transparent 100%
-    );
-    --tk-mask-fade-to-right: linear-gradient(
-        to right,
-        black 50%,
-        transparent 100%
-    );
-
-    /* Fade intensity variations */
-    --tk-mask-fade-short: linear-gradient(
-        to bottom,
-        black 80%,
-        transparent 100%
-    );
-    --tk-mask-fade-long: linear-gradient(
-        to bottom,
-        black 20%,
-        transparent 100%
-    );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
