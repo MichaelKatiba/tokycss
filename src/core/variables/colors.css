@@ -248,40 +248,6 @@
   --tk-color-accent-10a: oklch(from var(--tk-color-accent) l c h / var(--tk-alpha-10));
 }
 
-
-/* ══════════════════════════════════════════════════════════════════════════
-   NEUTRAL COLOR SCALE
-   ══════════════════════════════════════════════════════════════════════════ */
-
-:root {
-  /* Tints */
-  --tk-color-neutral-5xlight: oklch(from var(--tk-color-neutral) var(--tk-l-tint-5x) var(--tk-c-tint-5x) var(--tk-h-tint-5x));
-  --tk-color-neutral-4xlight: oklch(from var(--tk-color-neutral) var(--tk-l-tint-4x) var(--tk-c-tint-4x) var(--tk-h-tint-4x));
-  --tk-color-neutral-3xlight: oklch(from var(--tk-color-neutral) var(--tk-l-tint-3x) var(--tk-c-tint-3x) var(--tk-h-tint-3x));
-  --tk-color-neutral-2xlight: oklch(from var(--tk-color-neutral) var(--tk-l-tint-2x) var(--tk-c-tint-2x) var(--tk-h-tint-2x));
-  --tk-color-neutral-1xlight: oklch(from var(--tk-color-neutral) var(--tk-l-tint-1x) var(--tk-c-tint-1x) var(--tk-h-tint-1x));
-  
-  /* Shades */
-  --tk-color-neutral-1xdark: oklch(from var(--tk-color-neutral) var(--tk-l-shade-1x) var(--tk-c-shade-1x) var(--tk-h-shade-1x));
-  --tk-color-neutral-2xdark: oklch(from var(--tk-color-neutral) var(--tk-l-shade-2x) var(--tk-c-shade-2x) var(--tk-h-shade-2x));
-  --tk-color-neutral-3xdark: oklch(from var(--tk-color-neutral) var(--tk-l-shade-3x) var(--tk-c-shade-3x) var(--tk-h-shade-3x));
-  --tk-color-neutral-4xdark: oklch(from var(--tk-color-neutral) var(--tk-l-shade-4x) var(--tk-c-shade-4x) var(--tk-h-shade-4x));
-  --tk-color-neutral-5xdark: oklch(from var(--tk-color-neutral) var(--tk-l-shade-5x) var(--tk-c-shade-5x) var(--tk-h-shade-5x));
-
-  /* Alpha variants */
-  --tk-color-neutral-1a: oklch(from var(--tk-color-neutral) l c h / var(--tk-alpha-1));
-  --tk-color-neutral-2a: oklch(from var(--tk-color-neutral) l c h / var(--tk-alpha-2));
-  --tk-color-neutral-3a: oklch(from var(--tk-color-neutral) l c h / var(--tk-alpha-3));
-  --tk-color-neutral-4a: oklch(from var(--tk-color-neutral) l c h / var(--tk-alpha-4));
-  --tk-color-neutral-5a: oklch(from var(--tk-color-neutral) l c h / var(--tk-alpha-5));
-  --tk-color-neutral-6a: oklch(from var(--tk-color-neutral) l c h / var(--tk-alpha-6));
-  --tk-color-neutral-7a: oklch(from var(--tk-color-neutral) l c h / var(--tk-alpha-7));
-  --tk-color-neutral-8a: oklch(from var(--tk-color-neutral) l c h / var(--tk-alpha-8));
-  --tk-color-neutral-9a: oklch(from var(--tk-color-neutral) l c h / var(--tk-alpha-9));
-  --tk-color-neutral-10a: oklch(from var(--tk-color-neutral) l c h / var(--tk-alpha-10));
-}
-
-
 /* ══════════════════════════════════════════════════════════════════════════
    NEUTRAL COLOR SCALE
    ══════════════════════════════════════════════════════════════════════════ */

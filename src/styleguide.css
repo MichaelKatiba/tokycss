@@ -14,7 +14,6 @@
 
     /* Neutral hue — tints grays toward your brand */
     --tk-color-theme: oklch(86.66% 0.03151 259.611); 
-    --tk-color-neutral: oklch(66.66% 0.03151 259.611); 
     
 
     /* 🔤 TYPOGRAPHY */
