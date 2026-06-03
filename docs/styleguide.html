@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toky Design System — Style Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../dist/toky.css" />
+  <link rel="stylesheet" href="../src/styleguide.css" />
+  <style>
+    :root { color-scheme: light; }
+
+    /* ═══════════════════════════════════════
+       HEADER
+       Builds on framework's `header` styles:
+       flex, padding: 20px, border-bottom,
+       bg: --tk-bg-4x. Only adds sticky,
+       glass, and backdrop.
+       ═══════════════════════════════════════ */
+    .sg-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: color-mix(in oklch, var(--tk-bg-4x) 72%, transparent);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom-color: var(--tk-color-primary-3a);
+    }
+
+    .sg-header__inner {
+      width: 100%;
+    }
+
+    .sg-header__logo {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--tk-size-8);
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .sg-header__mark {
+      display: grid;
+      place-items: center;
+      width: var(--tk-size-20);
+      height: var(--tk-size-20);
+      border-radius: var(--tk-radius-md);
+      background: linear-gradient(
+        135deg,
+        var(--tk-color-primary),
+        var(--tk-color-secondary)
+      );
+      color: #fff;
+      font-family: var(--tk-font-display);
+      font-size: var(--tk-text-xs);
+      font-weight: 800;
+      line-height: 1;
+      box-shadow:
+        0 0 0 1px oklch(from var(--tk-color-primary) l c h / 0.12),
+        0 2px 6px oklch(from var(--tk-color-primary) l c h / 0.18);
+    }
+
+    .sg-header__wordmark {
+      font-family: var(--tk-font-display);
+      font-size: var(--tk-text-lg);
+      font-weight: 700;
+      color: var(--tk-fg-5x);
+      letter-spacing: -0.03em;
+    }
+
+    .sg-header__version {
+      font-family: var(--tk-font-mono);
+      font-size: 0.625rem;
+      font-weight: 500;
+      color: var(--tk-fg-1x);
+      background: var(--tk-bg-2x);
+      padding: 1px var(--tk-size-4);
+      border-radius: var(--tk-radius-xs);
+      border: 1px solid var(--tk-bg-2x);
+      line-height: 1.4;
+    }
+
+    /* ── Nav — builds on framework's
+       `header > * nav ul` (flex row, gap) ── */
+    .sg-nav ul {
+      list-style: none;
+    }
+
+    .sg-nav__link {
+      display: inline-flex;
+      align-items: center;
+      padding: var(--tk-size-4) var(--tk-size-12);
+      font-family: var(--tk-font-sans);
+      font-size: var(--tk-text-xs);
+      font-weight: 500;
+      color: var(--tk-fg-2x);
+      border-radius: var(--tk-radius-sm);
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+
+    .sg-nav__link:hover {
+      color: var(--tk-fg-5x);
+      background: var(--tk-bg-2x);
+    }
+
+    .sg-nav__link--active,
+    .sg-nav__link[aria-current] {
+      color: var(--tk-color-primary);
+      background: var(--tk-color-primary-2a);
+      font-weight: 600;
+    }
+
+    /* ═══════════════════════════════════════
+       HERO
+       Uses framework section padding
+       (padding-block: 64px) + extra top.
+       ═══════════════════════════════════════ */
+    .sg-hero {
+      position: relative;
+      padding-block-start: var(--tk-size-96);
+      overflow: hidden;
+    }
+
+    /* Diagonal color split background */
+    .sg-hero__bg {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .sg-hero__bg::before {
+      content: "";
+      position: absolute;
+      top: -40%;
+      bottom: -40%;
+      left: -20%;
+      right: -20%;
+      background:
+        linear-gradient(
+          108deg,
+          oklch(from var(--tk-color-primary) l c h / 0.07) 0%,
+          oklch(from var(--tk-color-primary) l c h / 0.07) 34%,
+          color-mix(
+            in oklch,
+            oklch(from var(--tk-color-primary) l c h / 0.07) 60%,
+            oklch(from var(--tk-color-secondary) l c h / 0.04)
+          ) 36%,
+          oklch(from var(--tk-color-secondary) l c h / 0.04) 42%,
+          transparent 48%
+        );
+    }
+
+    .sg-hero__bg::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg,
+        transparent 5%,
+        var(--tk-color-primary-4a) 20%,
+        var(--tk-color-secondary-3a) 40%,
+        var(--tk-color-accent-4a) 60%,
+        var(--tk-color-primary-3a) 80%,
+        transparent 95%
+      );
+    }
+
+    .sg-hero__body {
+      position: relative;
+      z-index: 1;
+      padding-block: var(--tk-size-48) var(--tk-size-64);
+    }
+
+    /* ── Scale badge ── */
+    .sg-hero__scale {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--tk-size-8);
+      padding: var(--tk-size-4) var(--tk-size-12);
+      margin-bottom: var(--tk-size-24);
+      background: var(--tk-bg-5x);
+      border: 1px solid var(--tk-bg-2x);
+      border-radius: var(--tk-radius-full);
+      box-shadow: var(--tk-color-shadow-xs);
+    }
+
+    .sg-hero__dot {
+      width: var(--tk-size-8);
+      height: var(--tk-size-8);
+      border-radius: 50%;
+      background: var(--tk-color-primary);
+      box-shadow: 0 0 0 3px oklch(from var(--tk-color-primary) l c h / 0.12);
+      animation: sg-pulse 2.4s ease-in-out infinite;
+    }
+
+    .sg-hero__meta {
+      font-family: var(--tk-font-mono);
+      font-size: var(--tk-text-xs);
+      font-weight: 500;
+      color: var(--tk-fg-2x);
+      letter-spacing: 0.02em;
+    }
+
+    /* ── Title — builds on framework's h1
+       (font-size: text-5xl, weight: 800,
+        line-height: xs, margin-block-end: 24px)
+       Only adds gradient accent. ── */
+    .sg-hero__title em {
+      font-style: normal;
+      background: linear-gradient(
+        135deg,
+        var(--tk-color-primary) 0%,
+        var(--tk-color-secondary) 70%,
+        var(--tk-color-accent) 120%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* ── Actions ── */
+    .sg-hero__actions {
+      display: flex;
+      align-items: center;
+      gap: var(--tk-size-12);
+      margin-top: var(--tk-size-32);
+    }
+
+    /* ── Spec card (breaks into right fill lane) ── */
+    .sg-hero__spec {
+      display: flex;
+      align-items: center;
+      gap: var(--tk-size-8);
+      padding: var(--tk-size-8) var(--tk-size-12);
+      background: var(--tk-bg-5x);
+      border: 1px solid var(--tk-bg-2x);
+      border-radius: var(--tk-radius-md);
+      box-shadow: var(--tk-color-shadow-sm);
+      width: fit-content;
+      justify-self: end;
+      align-self: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .sg-hero__chip {
+      width: var(--tk-size-16);
+      height: var(--tk-size-16);
+      border-radius: var(--tk-radius-2xs);
+      background: var(--tk-color-primary);
+      border: 1px solid oklch(from var(--tk-color-primary) l c h / 0.2);
+      flex-shrink: 0;
+    }
+
+    code.sg-hero__code {
+      font-family: var(--tk-font-mono);
+      font-size: 0.625rem;
+      font-weight: 500;
+      color: var(--tk-fg-1x);
+      line-height: 1.3;
+      background: none;
+      padding: 0;
+      border-radius: 0;
+    }
+
+    /* ── Gradient bar ── */
+    .sg-hero__bar {
+      grid-column: full;
+      height: var(--tk-size-2);
+      background: linear-gradient(90deg,
+        var(--tk-color-primary) 0%,
+        var(--tk-color-secondary) 50%,
+        var(--tk-color-accent) 100%
+      );
+      opacity: 0.3;
+      align-self: end;
+      margin-block-start: var(--tk-size-2);
+      pointer-events: none;
+    }
+
+    /* ═══════════════════════════════════════
+       BUTTON VARIANTS
+       Framework gives [role="button"] base:
+       inline-flex, padding 0.625rem 24px,
+       text-sm, weight 600, radius 8px,
+       border transparent, transitions.
+       We only add colors.
+       ═══════════════════════════════════════ */
+    .sg-btn--primary {
+      background: var(--tk-color-primary);
+      color: #fff;
+      border-color: var(--tk-color-primary);
+      box-shadow:
+        0 1px 2px oklch(from var(--tk-color-primary) l c h / 0.18),
+        0 4px 12px oklch(from var(--tk-color-primary) l c h / 0.12);
+    }
+
+    .sg-btn--primary:hover {
+      background: var(--tk-color-primary-1xdark);
+      border-color: var(--tk-color-primary-1xdark);
+      box-shadow:
+        0 2px 4px oklch(from var(--tk-color-primary) l c h / 0.2),
+        0 8px 24px oklch(from var(--tk-color-primary) l c h / 0.18);
+    }
+
+    .sg-btn--ghost {
+      background: transparent;
+      color: var(--tk-fg-4x);
+      border-color: var(--tk-bg-2x);
+    }
+
+    .sg-btn--ghost:hover {
+      color: var(--tk-fg-5x);
+      background: var(--tk-bg-2x);
+      border-color: var(--tk-bg-1x);
+    }
+
+    /* ═══════════════════════════════════════
+       SECTION PATTERN
+       ═══════════════════════════════════════ */
+    .sg-section__label {
+      display: inline-flex;
+      padding: var(--tk-size-2) var(--tk-size-8);
+      font-family: var(--tk-font-mono);
+      font-size: var(--tk-text-xs);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--tk-color-primary);
+      background: var(--tk-color-primary-2a);
+      border-radius: var(--tk-radius-xs);
+      margin-bottom: var(--tk-size-12);
+    }
+
+    .sg-section__desc {
+      font-size: var(--tk-text-lg);
+      color: var(--tk-fg-3x);
+      max-width: var(--tk-content-width);
+    }
+
+    /* ═══════════════════════════════════════
+       COLORS
+       ═══════════════════════════════════════ */
+    .sg-colors__hero {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--tk-size-4);
+      margin-block-end: var(--tk-size-48);
+    }
+
+    .sg-colors__brand {
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      gap: var(--tk-size-4);
+      padding: var(--tk-size-24);
+      min-height: 220px;
+      border-radius: var(--tk-radius-lg);
+      background: linear-gradient(to top, oklch(from var(--tk-color-shadow) l c h / 0.3) 0%, transparent 40%), var(--sg-swatch);
+    }
+
+    .sg-colors__brand-name {
+      font-size: var(--tk-text-lg);
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 0 1px 3px oklch(from var(--tk-color-shadow) l c h / 0.35);
+    }
+
+    code.sg-colors__brand-code {
+      font-family: var(--tk-font-mono);
+      font-size: var(--tk-text-xs);
+      color: oklch(from #fff l c h / 0.7);
+      background: none;
+      padding: 0;
+      border-radius: 0;
+    }
+
+    .sg-colors__scale {
+      margin-block-end: var(--tk-size-36);
+    }
+
+    .sg-colors__scale-head {
+      display: flex;
+      align-items: baseline;
+      gap: var(--tk-size-12);
+      margin-block-end: var(--tk-size-12);
+    }
+
+    .sg-colors__scale-label {
+      font-size: var(--tk-text-sm);
+      font-weight: 600;
+      color: var(--tk-fg-4x);
+    }
+
+    code.sg-colors__scale-var {
+      font-family: var(--tk-font-mono);
+      font-size: var(--tk-text-xs);
+      color: var(--tk-fg-1x);
+      background: var(--tk-bg-2x);
+      padding: 1px var(--tk-size-4);
+      border-radius: var(--tk-radius-xs);
+    }
+
+    .sg-colors__spectrum {
+      display: grid;
+      grid-template-columns: repeat(11, 1fr);
+      height: var(--tk-size-48);
+      border-radius: var(--tk-radius-md);
+      overflow: hidden;
+      box-shadow: 0 0 0 1px oklch(from var(--tk-color-shadow) l c h / 0.08);
+    }
+
+    .sg-colors__step {
+      position: relative;
+    }
+
+    .sg-colors__step::after {
+      content: attr(data-label);
+      position: absolute;
+      bottom: calc(-1 * var(--tk-size-20));
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: var(--tk-font-mono);
+      font-size: 0.5625rem;
+      color: var(--tk-fg-1x);
+      white-space: nowrap;
+    }
+
+    .sg-colors__status-group {
+      margin-block-start: var(--tk-size-12);
+    }
+
+    .sg-colors__status-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--tk-size-4);
+      margin-block-start: var(--tk-size-20);
+    }
+
+    .sg-colors__status {
+      display: flex;
+      align-items: center;
+      gap: var(--tk-size-8);
+      padding: var(--tk-size-16) var(--tk-size-12);
+      background: var(--tk-bg-4x);
+      border: 1px solid var(--tk-bg-2x);
+      border-radius: var(--tk-radius-md);
+    }
+
+    .sg-colors__status-dot {
+      width: var(--tk-size-12);
+      height: var(--tk-size-12);
+      border-radius: 50%;
+      background: var(--sg-status);
+      flex-shrink: 0;
+      border: 1px solid oklch(from var(--sg-status) l c h / 0.15);
+    }
+
+    .sg-colors__status-name {
+      font-size: var(--tk-text-sm);
+      font-weight: 600;
+      color: var(--tk-fg-4x);
+    }
+
+    code.sg-colors__status-code {
+      margin-left: auto;
+      font-family: var(--tk-font-mono);
+      font-size: var(--tk-text-xs);
+      color: var(--tk-fg-1x);
+      background: none;
+      padding: 0;
+      border-radius: 0;
+    }
+
+    /* ═══════════════════════════════════════
+       ANIMATIONS
+       ═══════════════════════════════════════ */
+    @keyframes sg-pulse {
+      0%, 100% {
+        opacity: 1;
+        box-shadow: 0 0 0 3px oklch(from var(--tk-color-primary) l c h / 0.12);
+      }
+      50% {
+        opacity: 0.4;
+        box-shadow: 0 0 0 7px oklch(from var(--tk-color-primary) l c h / 0.06);
+      }
+    }
+
+    /* ═══════════════════════════════════════
+       RESPONSIVE
+       ═══════════════════════════════════════ */
+    @media (max-width: 900px) {
+      .sg-nav { display: none; }
+      .sg-hero__spec { display: none; }
+      .sg-colors__hero { grid-template-columns: 1fr; }
+      .sg-colors__status-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 640px) {
+      .sg-hero {
+        padding-block-start: var(--tk-size-64);
+      }
+      .sg-hero__body {
+        padding-block: var(--tk-size-32) var(--tk-size-48);
+      }
+      .sg-colors__brand { min-height: 140px; }
+      .sg-colors__status-grid { grid-template-columns: 1fr; }
+      .sg-colors__spectrum { height: var(--tk-size-36); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     HEADER — framework handles flex layout,
+     padding, border. We add sticky + glass.
+     ═══════════════════════════════════════ -->
+<header class="sg-header">
+  <div class="sg-header__inner">
+    <a href="/" class="sg-header__logo">
+      <span class="sg-header__mark">T</span>
+      <span class="sg-header__wordmark">Toky</span>
+      <span class="sg-header__version">v0.1.0</span>
+    </a>
+    <nav class="sg-nav">
+      <ul>
+        <li><a href="#colors" class="sg-nav__link sg-nav__link--active" aria-current="page">Colors</a></li>
+        <li><a href="#typography" class="sg-nav__link">Type</a></li>
+        <li><a href="#spacing" class="sg-nav__link">Space</a></li>
+        <li><a href="#layout" class="sg-nav__link">Layout</a></li>
+        <li><a href="#components" class="sg-nav__link">Components</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════
+     HERO
+     ═══════════════════════════════════════ -->
+<section class="sg-hero">
+  <div class="sg-hero__bg"></div>
+
+  <div class="layout-grid">
+    <div class="layout--main">
+      <div class="sg-hero__body">
+        <div class="sg-hero__scale">
+          <span class="sg-hero__dot"></span>
+          <span class="sg-hero__meta">Design System · v0.1.0</span>
+        </div>
+
+        <h1 class="sg-hero__title">
+          Design with&nbsp;<em>conviction</em>
+        </h1>
+
+        <p>
+          Define your brand with OKLCH tokens. Write semantic HTML. The
+          framework handles color, typography, spacing, and layout.
+        </p>
+
+        <div class="sg-hero__actions">
+          <a href="#colors" class="sg-btn--primary" role="button">Browse Tokens</a>
+          <a href="#typography" class="sg-btn--ghost" role="button">Typography →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="sg-hero__spec layout--main-start-fill-end">
+      <span class="sg-hero__chip"></span>
+      <span class="sg-hero__code">--tk-color-primary: oklch(0.52 0.20 270)</span>
+    </div>
+
+    <div class="sg-hero__bar"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     COLORS
+     ═══════════════════════════════════════ -->
+<section id="colors" class="sg-colors">
+  <div class="layout-grid">
+    <div>
+      <div class="sg-section__label">Tokens</div>
+      <h2>Color System</h2>
+      <p class="sg-section__desc">
+        OKLCH color scales with automatic tint, shade, and alpha
+        generation. Each token derives from a single base value.
+      </p>
+    </div>
+
+    <div class="sg-colors__hero layout--main-start-full-end">
+      <div class="sg-colors__brand" style="--sg-swatch: var(--tk-color-primary);">
+        <span class="sg-colors__brand-name">Primary</span>
+        <code class="sg-colors__brand-code">oklch(0.52 0.20 270)</code>
+      </div>
+      <div class="sg-colors__brand" style="--sg-swatch: var(--tk-color-secondary);">
+        <span class="sg-colors__brand-name">Secondary</span>
+        <code class="sg-colors__brand-code">oklch(0.62 0.14 195)</code>
+      </div>
+      <div class="sg-colors__brand" style="--sg-swatch: var(--tk-color-accent);">
+        <span class="sg-colors__brand-name">Accent</span>
+        <code class="sg-colors__brand-code">oklch(0.72 0.17 75)</code>
+      </div>
+    </div>
+
+    <div class="sg-colors__scale layout--main-start-full-end">
+      <div class="sg-colors__scale-head">
+        <span class="sg-colors__scale-label">Primary</span>
+        <code class="sg-colors__scale-var">--tk-color-primary</code>
+      </div>
+      <div class="sg-colors__spectrum">
+        <div class="sg-colors__step" style="background: var(--tk-color-primary-5xlight)" data-label="5x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-primary-4xlight)" data-label="4x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-primary-3xlight)" data-label="3x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-primary-2xlight)" data-label="2x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-primary-1xlight)" data-label="1x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-primary)" data-label="base"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-primary-1xdark)" data-label="1x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-primary-2xdark)" data-label="2x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-primary-3xdark)" data-label="3x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-primary-4xdark)" data-label="4x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-primary-5xdark)" data-label="5x"></div>
+      </div>
+    </div>
+
+    <div class="sg-colors__scale layout--main-start-full-end">
+      <div class="sg-colors__scale-head">
+        <span class="sg-colors__scale-label">Secondary</span>
+        <code class="sg-colors__scale-var">--tk-color-secondary</code>
+      </div>
+      <div class="sg-colors__spectrum">
+        <div class="sg-colors__step" style="background: var(--tk-color-secondary-5xlight)" data-label="5x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-secondary-4xlight)" data-label="4x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-secondary-3xlight)" data-label="3x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-secondary-2xlight)" data-label="2x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-secondary-1xlight)" data-label="1x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-secondary)" data-label="base"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-secondary-1xdark)" data-label="1x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-secondary-2xdark)" data-label="2x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-secondary-3xdark)" data-label="3x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-secondary-4xdark)" data-label="4x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-secondary-5xdark)" data-label="5x"></div>
+      </div>
+    </div>
+
+    <div class="sg-colors__scale layout--main-start-full-end">
+      <div class="sg-colors__scale-head">
+        <span class="sg-colors__scale-label">Accent</span>
+        <code class="sg-colors__scale-var">--tk-color-accent</code>
+      </div>
+      <div class="sg-colors__spectrum">
+        <div class="sg-colors__step" style="background: var(--tk-color-accent-5xlight)" data-label="5x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-accent-4xlight)" data-label="4x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-accent-3xlight)" data-label="3x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-accent-2xlight)" data-label="2x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-accent-1xlight)" data-label="1x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-accent)" data-label="base"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-accent-1xdark)" data-label="1x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-accent-2xdark)" data-label="2x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-accent-3xdark)" data-label="3x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-accent-4xdark)" data-label="4x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-accent-5xdark)" data-label="5x"></div>
+      </div>
+    </div>
+
+    <div class="sg-colors__scale layout--main-start-full-end">
+      <div class="sg-colors__scale-head">
+        <span class="sg-colors__scale-label">Theme</span>
+        <code class="sg-colors__scale-var">--tk-color-theme</code>
+      </div>
+      <div class="sg-colors__spectrum">
+        <div class="sg-colors__step" style="background: var(--tk-color-theme-5xlight)" data-label="5x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-theme-4xlight)" data-label="4x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-theme-3xlight)" data-label="3x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-theme-2xlight)" data-label="2x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-theme-1xlight)" data-label="1x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-theme)" data-label="base"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-theme-1xdark)" data-label="1x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-theme-2xdark)" data-label="2x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-theme-3xdark)" data-label="3x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-theme-4xdark)" data-label="4x"></div>
+        <div class="sg-colors__step" style="background: var(--tk-color-theme-5xdark)" data-label="5x"></div>
+      </div>
+    </div>
+
+    <div class="sg-colors__status-group layout--main-start-full-end">
+      <div class="sg-colors__scale-head">
+        <span class="sg-colors__scale-label">Status</span>
+      </div>
+      <div class="sg-colors__status-grid">
+        <div class="sg-colors__status" style="--sg-status: var(--tk-color-success);">
+          <span class="sg-colors__status-dot"></span>
+          <span class="sg-colors__status-name">Success</span>
+          <code class="sg-colors__status-code">oklch(0.62 0.20 145)</code>
+        </div>
+        <div class="sg-colors__status" style="--sg-status: var(--tk-color-warning);">
+          <span class="sg-colors__status-dot"></span>
+          <span class="sg-colors__status-name">Warning</span>
+          <code class="sg-colors__status-code">oklch(0.80 0.16 70)</code>
+        </div>
+        <div class="sg-colors__status" style="--sg-status: var(--tk-color-error);">
+          <span class="sg-colors__status-dot"></span>
+          <span class="sg-colors__status-name">Error</span>
+          <code class="sg-colors__status-code">oklch(0.58 0.22 25)</code>
+        </div>
+        <div class="sg-colors__status" style="--sg-status: var(--tk-color-info);">
+          <span class="sg-colors__status-dot"></span>
+          <span class="sg-colors__status-name">Info</span>
+          <code class="sg-colors__status-code">oklch(0.58 0.18 245)</code>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

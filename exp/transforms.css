@@ -1,0 +1,57 @@
+:root{
+    /* ====================================================================== */
+    /* TRANSFORM SYSTEM                                                       */
+    /* ====================================================================== */
+
+    /*
+   * Transform Properties
+   *
+   * These variables define common transform functions for consistent usage.
+   * Transforms allow elements to be visually manipulated in 2D or 3D space.
+   */
+
+    /* Scale Transforms - Progressive shrink effect */
+    --tk-scale-2x: scale(0.75);
+    --tk-scale-xs: scale(0.5);
+    --tk-scale-sm: scale(0.25);
+    --tk-scale-md: scale(0.125);
+    --tk-scale-lg: scale(0.0625);
+    --tk-scale-xl: scale(0.03125);
+    --tk-scale-2xl: scale(0.015625);
+    --tk-scale-3xl: scale(0.0078125);
+    --tk-scale-full: scale(1);
+
+    /* Rotation Transforms */
+    --tk-rotate-0: rotate(0deg); /* No rotation */
+    --tk-rotate-2x: rotate(5deg); /* 5 degrees rotation */
+    --tk-rotate-xs: rotate(10deg); /* 10 degrees rotation */
+    --tk-rotate-sm: rotate(15deg); /* 15 degrees rotation */
+    --tk-rotate-md: rotate(20deg); /* 20 degrees rotation */
+    --tk-rotate-lg: rotate(45deg); /* 45 degrees rotation */
+    --tk-rotate-xl: rotate(90deg); /* 90 degrees rotation */
+    --tk-rotate-2xl: rotate(180deg); /* 180 degrees rotation */
+    --tk-rotate-3xl: rotate(270deg); /* 270 degrees rotation */
+    --tk-rotate-full: rotate(360deg); /* 360 degrees rotation */
+
+    /* Translation Transforms */
+    --tk-translate-x-2x: translateX(5%); /* Move 5% right */
+    --tk-translate-x-xs: translateX(10%); /* Move 10% right */
+    --tk-translate-x-sm: translateX(15%); /* Move 15% right */
+    --tk-translate-x-md: translateX(20%); /* Move 20% right */
+    --tk-translate-x-lg: translateX(25%); /* Move 25% right */
+    --tk-translate-x-xl: translateX(30%); /* Move 30% right */
+    --tk-translate-x-2xl: translateX(35%); /* Move 35% right */
+    --tk-translate-x-3xl: translateX(40%); /* Move 40% right */
+    --tk-translate-x-full: translateX(100%); /* Move 100% right */
+
+    --tk-translate-y-2x: translateY(5%); /* Move 5% down */
+    --tk-translate-y-xs: translateY(10%); /* Move 10% down */
+    --tk-translate-y-sm: translateY(15%); /* Move 15% down */
+    --tk-translate-y-md: translateY(20%); /* Move 20% down */
+    --tk-translate-y-lg: translateY(25%); /* Move 25% down */
+    --tk-translate-y-xl: translateY(30%); /* Move 30% down */
+    --tk-translate-y-2xl: translateY(35%); /* Move 35% down */
+    --tk-translate-y-3xl: translateY(40%); /* Move 40% down */
+    --tk-translate-y-full: translateY(100%); /* Move 100% down */
+
+}
