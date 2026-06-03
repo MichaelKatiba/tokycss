@@ -175,13 +175,13 @@
          * Use 'ch' for readability, or a fixed unit like 'rem' or 'px' for design precision.
          * Example: 70ch (ideal for articles), 80rem (for a 1280px container).
          */
-        --tk-layout-main-width: var(--tk-main-width, 80ch);
+        --tk-layout-main-width: var(--tk-content-width, 80ch);
 
         /*
          * Sets the secondary, larger breakout size, extending beyond the 'main' lane.
          * Example: 90rem, 1200px, etc.
          */
-        --tk-layout-fill-width: var(--tk-fill-width, 90rem);
+        --tk-layout-fill-width: var(--tk-content-fill-width, 90ch);
 
         /*
          * Defines the minimum gutter space on the left and right sides of the page.

@@ -52,8 +52,8 @@ table {
 }
 
 thead {
-  background-color: var(--tk-color-neutral-4xlight);
-  border-bottom: 2px solid var(--tk-border);
+  background-color: var(--tk-color-theme-4xlight);
+  border-bottom: 2px solid var(--tk-border-2xs);
 }
 
 th {
@@ -72,7 +72,7 @@ td {
 }
 
 tbody tr {
-  transition: background-color var(--normal-fast) var(--tk-easing);
+  transition: background-color var(--tk-duration-sm) var(--tk-easing);
 }
 
 tbody tr:hover {

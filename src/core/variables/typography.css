@@ -246,7 +246,7 @@
     --tk-text-underline-xs: 2px;
     --tk-text-underline-sm: 4px;
     --tk-text-underline-md: 6px;
-    --tk-text-underline-lg: 8;
+    --tk-text-underline-lg: 8px;
     --tk-text-underline-xl: 10px;
     --tk-text-underline-2xl: 12px;
     --tk-text-underline-3xl: 14px;
@@ -278,12 +278,12 @@
    *
    * These variables define text alignment values for consistent usage.
    */
-    --tk-text-align-left: left;
-    --tk-text-align-center: center;
-    --tk-text-align-right: right;
-    --tk-text-align-justify: justify;
-    --tk-text-align-start: start;
-    --tk-text-align-end: end;
+    --tk-text-left: left;
+    --tk-text-center: center;
+    --tk-text-right: right;
+    --tk-text-justify: justify;
+    --tk-text-start: start;
+    --tk-text-end: end;
 
     /*
    * Text Overflow Properties
@@ -326,7 +326,7 @@
    * Controls text shadow effects
    */
     --tk-text-shadow-none: var(--tk-value-none);
-    --tk-text-shadow-2xs: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    --tk-text-shadow-2xs: 0.5px 0.5px 1px rgba(0, 0, 0, 0.08);
     --tk-text-shadow-xs: 1px 1px 2px rgba(0, 0, 0, 0.1);
     --tk-text-shadow-sm: 2px 2px 4px rgba(0, 0, 0, 0.1);
     --tk-text-shadow-md: 4px 4px 6px rgba(0, 0, 0, 0.1);
