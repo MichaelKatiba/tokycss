@@ -125,7 +125,7 @@ pre {
   font-family: var(--tk-font-mono);
   font-size: var(--tk-text-sm);
   line-height: var(--tk-line-height-sm);
-  background-color: var(--tk-color-neutral-4xlight);
+  background-color: var(--tk-color-theme-4xlight);
   color: var(--tk-fg-5x);
   padding: var(--tk-size-24);
   border-radius: var(--tk-size-12);

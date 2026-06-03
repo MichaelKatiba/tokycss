@@ -128,7 +128,7 @@ input[type="range"] {
   appearance: none;
   width: 100%;
   height: 6px;
-  background: var(--tk-color-neutral-3xlight);
+  background: var(--tk-color-theme-3xlight);
   border-radius: var(--tk-radius-full);
   outline: none;
   cursor: pointer;
@@ -203,7 +203,7 @@ progress {
 }
 
 progress::-webkit-progress-bar {
-  background-color: var(--tk-color-neutral-4xlight);
+  background-color: var(--tk-color-theme-4xlight);
   border-radius: var(--tk-radius-full);
 }
 
