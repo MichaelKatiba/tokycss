@@ -30,7 +30,7 @@
     line-height: var(--tk-line-height-md);
   }
 
-  body, main, section article, aside, header, footer {
+  body, main, section, article, aside, header, footer {
     position: relative;
   }
 
