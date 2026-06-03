@@ -20,15 +20,15 @@
     --tk-radius-3xl: 24px; /* Extra rounded corners */
     --tk-radius-full: 9999px; /* Fully rounded (circles/pills) */
 
-    --tk-border-width-0: 0px;
-    --tk-border-width-2xs: 1px;
-    --tk-border-width-xs: 2px;
-    --tk-border-width-sm: 4px;
-    --tk-border-width-md: 8px;
-    --tk-border-width-lg: 12px;
-    --tk-border-width-xl: 16px;
-    --tk-border-width-2xl: 20px;
-    --tk-border-width-3xl: 24px;
+    --tk-border-0: 0px;
+    --tk-border-2xs: 1px;
+    --tk-border-xs: 2px;
+    --tk-border-sm: 4px;
+    --tk-border-md: 8px;
+    --tk-border-lg: 12px;
+    --tk-border-xl: 16px;
+    --tk-border-2xl: 20px;
+    --tk-border-3xl: 24px;
 
     /*
    * Border Styles
@@ -37,15 +37,15 @@
    * These variables make it easier to maintain consistent border styles.
    */
 
-    --tk-border-style-none: none;
-    --tk-border-style-solid: solid;
-    --tk-border-style-dashed: dashed;
-    --tk-border-style-dotted: dotted;
-    --tk-border-style-double: double;
-    --tk-border-style-groove: groove;
-    --tk-border-style-ridge: ridge;
-    --tk-border-style-inset: inset;
-    --tk-border-style-outset: outset;
+    --tk-border-none: none;
+    --tk-border-solid: solid;
+    --tk-border-dashed: dashed;
+    --tk-border-dotted: dotted;
+    --tk-border-double: double;
+    --tk-border-groove: groove;
+    --tk-border-ridge: ridge;
+    --tk-border-inset: inset;
+    --tk-border-outset: outset;
 
     /*
    * Outline Properties
@@ -53,21 +53,21 @@
    * These variables define outline styles for accessibility and focus states.
    */
 
-    --tk-outline-style-none: none; /* None outline */
-    --tk-outline-style-solid: solid; /* Solid outline */
-    --tk-outline-style-dashed: dashed; /* Dashed outline */
-    --tk-outline-style-dotted: dotted; /* Dotted outline */
-    --tk-outline-style-double: double; /* Double outline */
+    --tk-outline-none: none; /* None outline */
+    --tk-outline-solid: solid; /* Solid outline */
+    --tk-outline-dashed: dashed; /* Dashed outline */
+    --tk-outline-dotted: dotted; /* Dotted outline */
+    --tk-outline-double: double; /* Double outline */
 
-    --tk-outline-width-0: 0px;
-    --tk-outline-width-2xs: 1px;
-    --tk-outline-width-xs: 2px;
-    --tk-outline-width-sm: 4px;
-    --tk-outline-width-md: 8px;
-    --tk-outline-width-lg: 12px;
-    --tk-outline-width-xl: 16px;
-    --tk-outline-width-2xl: 20px;
-    --tk-outline-width-3xl: 24px;
+    --tk-outline-0: 0px;
+    --tk-outline-2xs: 1px;
+    --tk-outline-xs: 2px;
+    --tk-outline-sm: 4px;
+    --tk-outline-md: 8px;
+    --tk-outline-lg: 12px;
+    --tk-outline-xl: 16px;
+    --tk-outline-2xl: 20px;
+    --tk-outline-3xl: 24px;
 
 
 

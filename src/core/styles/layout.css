@@ -4,7 +4,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: var(--tk-size-20) var(--tk-size-20);
-    border-bottom: 1px solid var(--tk-border-muted);
+    border-bottom: 1px solid var(--tk-border-xs);
     background-color: var(--tk-bg-4x);
 
 }
