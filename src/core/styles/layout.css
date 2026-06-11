@@ -65,7 +65,7 @@ aside {
  * Apply this class to your `<body>` or a <main> wrapper.
  * It establishes the page grid defined by our engine.
  */
-.layout-grid {
+.layout--grid {
     display: grid;
     grid-template-columns: var(--tk-layout-grid);
 }
@@ -76,7 +76,7 @@ aside {
  * '.layout-grid' default to the safe 'main' layout. This prevents
  * accidental full-bleed elements and provides a stable foundation.
  */
-.layout-grid > * {
+.layout--grid > * {
     grid-column: main; /* The 'main' named grid area */
 }
 
