@@ -44,3 +44,7 @@ coverage/
 *.tsbuildinfo
 .eslintcache
 .stylelintcache
+
+skills/
+src/pages/
+src/exp/

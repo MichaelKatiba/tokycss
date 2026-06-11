@@ -62,7 +62,7 @@ export default defineConfig({
   },
   // Ensure the server watches your CSS for changes
   server: {
-    open: 'src/pages/styleguide.html',
+    open: 'docs/styleguide.html',
     watch: {
       usePolling: true
     }

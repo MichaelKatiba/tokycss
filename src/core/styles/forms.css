@@ -4,7 +4,7 @@ label {
   display: block;
   font-size: var(--tk-text-sm);
   font-weight: 600;
-  color: var(--tk-fg-default);
+  color: var(--tk-fg-5x);
   margin-block-end: 0.375rem;
 }
 
@@ -14,11 +14,11 @@ select {
   display: block;
   width: 100%;
   padding: 0.625rem var(--tk-size-12);
-  font-size: var(--tk-text-base);
+  font-size: var(--tk-text-md);
   line-height: var(--tk-line-height-sm);
-  color: var(--tk-fg-default);
-  background-color: var(--tk-bg-surface);
-  border: 1px solid var(--tk-border-default);
+  color: var(--tk-fg-5x);
+  background-color: var(--tk-bg-4x);
+  border: 1px solid var(--tk-bg-4x);
   border-radius: var(--tk-size-8);
   outline: none;
   transition: border-color var(--tk-duration-fast) var(--tk-easing), box-shadow var(--tk-duration-fast) var(--tk-easing);
@@ -27,7 +27,7 @@ select {
 input:where([type="text"], [type="email"], [type="password"], [type="url"], [type="tel"], [type="number"], [type="search"], [type="date"], [type="datetime-local"], [type="month"], [type="week"], [type="time"]):hover,
 textarea:hover,
 select:hover {
-  border-color: var(--tk-border-strong);
+  border-color: var(--tk-border-2xs);
 }
 
 input:where([type="text"], [type="email"], [type="password"], [type="url"], [type="tel"], [type="number"], [type="search"], [type="date"], [type="datetime-local"], [type="month"], [type="week"], [type="time"]):focus,
@@ -38,7 +38,7 @@ select:focus {
 }
 
 ::placeholder {
-  color: var(--tk-fg-subtle);
+  color: var(--tk-fg-3x);
   opacity: 1;
 }
 
@@ -47,7 +47,7 @@ textarea:disabled,
 select:disabled {
   opacity: 0.5;
   cursor: not-allowed;
-  background-color: var(--tk-bg-muted);
+  background-color: var(--tk-color-theme-2xlight);
 }
 
 textarea {
@@ -69,8 +69,8 @@ input[type="radio"] {
   appearance: none;
   width: 1.125rem;
   height: 1.125rem;
-  border: 2px solid var(--tk-border-strong);
-  background-color: var(--tk-bg-surface);
+  border: 2px solid var(--tk-bg-2x);
+  background-color: var(--tk-bg-4x);
   vertical-align: middle;
   position: relative;
   cursor: pointer;
@@ -128,7 +128,7 @@ input[type="range"] {
   appearance: none;
   width: 100%;
   height: 6px;
-  background: var(--tk-color-neutral-3xlight);
+  background: var(--tk-color-theme-3xlight);
   border-radius: var(--tk-radius-full);
   outline: none;
   cursor: pointer;
@@ -140,8 +140,8 @@ input[type="range"]::-webkit-slider-thumb {
   height: 1.25rem;
   background: var(--tk-color-primary);
   border-radius: var(--tk-radius-full);
-  border: 3px solid var(--tk-bg-surface);
-  box-shadow: var(--tk-shadow-sm);
+  border: 3px solid var(--tk-bg-4x);
+  box-shadow: var(--tk-color-shadow-sm);
   cursor: grab;
   transition: transform var(--tk-duration-fast) var(--tk-easing);
 }
@@ -154,11 +154,11 @@ input[type="color"] {
   appearance: none;
   width: 3rem;
   height: 2.5rem;
-  border: 2px solid var(--tk-border-default);
+  border: 2px solid var(--tk-border-2xs);
   border-radius: var(--tk-size-8);
   padding: var(--tk-size-4);
   cursor: pointer;
-  background: var(--tk-bg-surface);
+  background: var(--tk-bg-4x);
 }
 
 input[type="color"]::-webkit-color-swatch-wrapper {
@@ -172,7 +172,7 @@ input[type="color"]::-webkit-color-swatch {
 
 input[type="file"] {
   font-size: var(--tk-text-sm);
-  color: var(--tk-fg-muted);
+  color: var(--tk-fg-2x);
 }
 
 input[type="file"]::file-selector-button {
@@ -203,7 +203,7 @@ progress {
 }
 
 progress::-webkit-progress-bar {
-  background-color: var(--tk-color-neutral-4xlight);
+  background-color: var(--tk-color-theme-4xlight);
   border-radius: var(--tk-radius-full);
 }
 
@@ -218,7 +218,7 @@ progress::-moz-progress-bar {
 }
 
 fieldset {
-  border: 1px solid var(--tk-border-default);
+  border: 1px solid var(--tk-bg-4x);
   border-radius: var(--tk-size-12);
   padding: var(--tk-size-24);
   margin-block-end: var(--tk-size-24);
@@ -227,7 +227,7 @@ fieldset {
 legend {
   font-weight: 700;
   font-size: var(--tk-text-sm);
-  color: var(--tk-fg-default);
+  color: var(--tk-fg-5x);
   padding-inline: var(--tk-size-2);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -237,5 +237,5 @@ label:has(+ input:required)::after,
 label:has(+ textarea:required)::after,
 label:has(+ select:required)::after {
   content: " *";
-  color: var(--tk-color-danger);
+  color: var(--tk-fg-4x);
 }

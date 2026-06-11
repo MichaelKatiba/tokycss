@@ -248,70 +248,36 @@
   --tk-color-accent-10a: oklch(from var(--tk-color-accent) l c h / var(--tk-alpha-10));
 }
 
-
 /* ══════════════════════════════════════════════════════════════════════════
-   NEUTRAL COLOR SCALE
+   THEME COLOR SCALE
    ══════════════════════════════════════════════════════════════════════════ */
 
 :root {
   /* Tints */
-  --tk-color-neutral-5xlight: oklch(from var(--tk-color-neutral) var(--tk-l-tint-5x) var(--tk-c-tint-5x) var(--tk-h-tint-5x));
-  --tk-color-neutral-4xlight: oklch(from var(--tk-color-neutral) var(--tk-l-tint-4x) var(--tk-c-tint-4x) var(--tk-h-tint-4x));
-  --tk-color-neutral-3xlight: oklch(from var(--tk-color-neutral) var(--tk-l-tint-3x) var(--tk-c-tint-3x) var(--tk-h-tint-3x));
-  --tk-color-neutral-2xlight: oklch(from var(--tk-color-neutral) var(--tk-l-tint-2x) var(--tk-c-tint-2x) var(--tk-h-tint-2x));
-  --tk-color-neutral-1xlight: oklch(from var(--tk-color-neutral) var(--tk-l-tint-1x) var(--tk-c-tint-1x) var(--tk-h-tint-1x));
+  --tk-color-theme-5xlight: oklch(from var(--tk-color-theme) var(--tk-l-tint-5x) var(--tk-c-tint-5x) var(--tk-h-tint-5x));
+  --tk-color-theme-4xlight: oklch(from var(--tk-color-theme) var(--tk-l-tint-4x) var(--tk-c-tint-4x) var(--tk-h-tint-4x));
+  --tk-color-theme-3xlight: oklch(from var(--tk-color-theme) var(--tk-l-tint-3x) var(--tk-c-tint-3x) var(--tk-h-tint-3x));
+  --tk-color-theme-2xlight: oklch(from var(--tk-color-theme) var(--tk-l-tint-2x) var(--tk-c-tint-2x) var(--tk-h-tint-2x));
+  --tk-color-theme-1xlight: oklch(from var(--tk-color-theme) var(--tk-l-tint-1x) var(--tk-c-tint-1x) var(--tk-h-tint-1x));
   
   /* Shades */
-  --tk-color-neutral-1xdark: oklch(from var(--tk-color-neutral) var(--tk-l-shade-1x) var(--tk-c-shade-1x) var(--tk-h-shade-1x));
-  --tk-color-neutral-2xdark: oklch(from var(--tk-color-neutral) var(--tk-l-shade-2x) var(--tk-c-shade-2x) var(--tk-h-shade-2x));
-  --tk-color-neutral-3xdark: oklch(from var(--tk-color-neutral) var(--tk-l-shade-3x) var(--tk-c-shade-3x) var(--tk-h-shade-3x));
-  --tk-color-neutral-4xdark: oklch(from var(--tk-color-neutral) var(--tk-l-shade-4x) var(--tk-c-shade-4x) var(--tk-h-shade-4x));
-  --tk-color-neutral-5xdark: oklch(from var(--tk-color-neutral) var(--tk-l-shade-5x) var(--tk-c-shade-5x) var(--tk-h-shade-5x));
+  --tk-color-theme-1xdark: oklch(from var(--tk-color-theme) var(--tk-l-shade-1x) var(--tk-c-shade-1x) var(--tk-h-shade-1x));
+  --tk-color-theme-2xdark: oklch(from var(--tk-color-theme) var(--tk-l-shade-2x) var(--tk-c-shade-2x) var(--tk-h-shade-2x));
+  --tk-color-theme-3xdark: oklch(from var(--tk-color-theme) var(--tk-l-shade-3x) var(--tk-c-shade-3x) var(--tk-h-shade-3x));
+  --tk-color-theme-4xdark: oklch(from var(--tk-color-theme) var(--tk-l-shade-4x) var(--tk-c-shade-4x) var(--tk-h-shade-4x));
+  --tk-color-theme-5xdark: oklch(from var(--tk-color-theme) var(--tk-l-shade-5x) var(--tk-c-shade-5x) var(--tk-h-shade-5x));
 
   /* Alpha variants */
-  --tk-color-neutral-1a: oklch(from var(--tk-color-neutral) l c h / var(--tk-alpha-1));
-  --tk-color-neutral-2a: oklch(from var(--tk-color-neutral) l c h / var(--tk-alpha-2));
-  --tk-color-neutral-3a: oklch(from var(--tk-color-neutral) l c h / var(--tk-alpha-3));
-  --tk-color-neutral-4a: oklch(from var(--tk-color-neutral) l c h / var(--tk-alpha-4));
-  --tk-color-neutral-5a: oklch(from var(--tk-color-neutral) l c h / var(--tk-alpha-5));
-  --tk-color-neutral-6a: oklch(from var(--tk-color-neutral) l c h / var(--tk-alpha-6));
-  --tk-color-neutral-7a: oklch(from var(--tk-color-neutral) l c h / var(--tk-alpha-7));
-  --tk-color-neutral-8a: oklch(from var(--tk-color-neutral) l c h / var(--tk-alpha-8));
-  --tk-color-neutral-9a: oklch(from var(--tk-color-neutral) l c h / var(--tk-alpha-9));
-  --tk-color-neutral-10a: oklch(from var(--tk-color-neutral) l c h / var(--tk-alpha-10));
-}
-
-
-/* ══════════════════════════════════════════════════════════════════════════
-   NEUTRAL COLOR SCALE
-   ══════════════════════════════════════════════════════════════════════════ */
-
-:root {
-  /* Tints */
-  --tk-color-theme-5xlight: oklch(from var(--tk-theme) var(--tk-l-tint-5x) var(--tk-c-tint-5x) var(--tk-h-tint-5x));
-  --tk-color-theme-4xlight: oklch(from var(--tk-theme) var(--tk-l-tint-4x) var(--tk-c-tint-4x) var(--tk-h-tint-4x));
-  --tk-color-theme-3xlight: oklch(from var(--tk-theme) var(--tk-l-tint-3x) var(--tk-c-tint-3x) var(--tk-h-tint-3x));
-  --tk-color-theme-2xlight: oklch(from var(--tk-theme) var(--tk-l-tint-2x) var(--tk-c-tint-2x) var(--tk-h-tint-2x));
-  --tk-color-theme-1xlight: oklch(from var(--tk-theme) var(--tk-l-tint-1x) var(--tk-c-tint-1x) var(--tk-h-tint-1x));
-  
-  /* Shades */
-  --tk-color-theme-1xdark: oklch(from var(--tk-theme) var(--tk-l-shade-1x) var(--tk-c-shade-1x) var(--tk-h-shade-1x));
-  --tk-color-theme-2xdark: oklch(from var(--tk-theme) var(--tk-l-shade-2x) var(--tk-c-shade-2x) var(--tk-h-shade-2x));
-  --tk-color-theme-3xdark: oklch(from var(--tk-theme) var(--tk-l-shade-3x) var(--tk-c-shade-3x) var(--tk-h-shade-3x));
-  --tk-color-theme-4xdark: oklch(from var(--tk-theme) var(--tk-l-shade-4x) var(--tk-c-shade-4x) var(--tk-h-shade-4x));
-  --tk-color-theme-5xdark: oklch(from var(--tk-theme) var(--tk-l-shade-5x) var(--tk-c-shade-5x) var(--tk-h-shade-5x));
-
-  /* Alpha variants */
-  --tk-color-theme-1a: oklch(from var(--tk-theme) l c h / var(--tk-alpha-1));
-  --tk-color-theme-2a: oklch(from var(--tk-theme) l c h / var(--tk-alpha-2));
-  --tk-color-theme-3a: oklch(from var(--tk-theme) l c h / var(--tk-alpha-3));
-  --tk-color-theme-4a: oklch(from var(--tk-theme) l c h / var(--tk-alpha-4));
-  --tk-color-theme-5a: oklch(from var(--tk-theme) l c h / var(--tk-alpha-5));
-  --tk-color-theme-6a: oklch(from var(--tk-theme) l c h / var(--tk-alpha-6));
-  --tk-color-theme-7a: oklch(from var(--tk-theme) l c h / var(--tk-alpha-7));
-  --tk-color-theme-8a: oklch(from var(--tk-theme) l c h / var(--tk-alpha-8));
-  --tk-color-theme-9a: oklch(from var(--tk-theme) l c h / var(--tk-alpha-9));
-  --tk-color-theme-10a: oklch(from var(--tk-theme) l c h / var(--tk-alpha-10));
+  --tk-color-theme-1a: oklch(from var(--tk-color-theme) l c h / var(--tk-alpha-1));
+  --tk-color-theme-2a: oklch(from var(--tk-color-theme) l c h / var(--tk-alpha-2));
+  --tk-color-theme-3a: oklch(from var(--tk-color-theme) l c h / var(--tk-alpha-3));
+  --tk-color-theme-4a: oklch(from var(--tk-color-theme) l c h / var(--tk-alpha-4));
+  --tk-color-theme-5a: oklch(from var(--tk-color-theme) l c h / var(--tk-alpha-5));
+  --tk-color-theme-6a: oklch(from var(--tk-color-theme) l c h / var(--tk-alpha-6));
+  --tk-color-theme-7a: oklch(from var(--tk-color-theme) l c h / var(--tk-alpha-7));
+  --tk-color-theme-8a: oklch(from var(--tk-color-theme) l c h / var(--tk-alpha-8));
+  --tk-color-theme-9a: oklch(from var(--tk-color-theme) l c h / var(--tk-alpha-9));
+  --tk-color-theme-10a: oklch(from var(--tk-color-theme) l c h / var(--tk-alpha-10));
 }
 
 /* ══════════════════════════════════════════════════════════════════════════
@@ -378,33 +344,33 @@
   --tk-color-warning-10a: oklch(from var(--tk-color-warning) l c h / var(--tk-alpha-10));
 
   /* ── DANGER ────────────────────────────────────────────────────────────── */
-  --tk-color-danger: oklch(0.58 0.22 25);
+  --tk-color-error: oklch(0.58 0.22 25);
   
   /* Tints */
-  --tk-color-danger-5xlight: oklch(from var(--tk-color-danger) var(--tk-l-tint-5x) var(--tk-c-tint-5x) var(--tk-h-tint-5x));
-  --tk-color-danger-4xlight: oklch(from var(--tk-color-danger) var(--tk-l-tint-4x) var(--tk-c-tint-4x) var(--tk-h-tint-4x));
-  --tk-color-danger-3xlight: oklch(from var(--tk-color-danger) var(--tk-l-tint-3x) var(--tk-c-tint-3x) var(--tk-h-tint-3x));
-  --tk-color-danger-2xlight: oklch(from var(--tk-color-danger) var(--tk-l-tint-2x) var(--tk-c-tint-2x) var(--tk-h-tint-2x));
-  --tk-color-danger-1xlight: oklch(from var(--tk-color-danger) var(--tk-l-tint-1x) var(--tk-c-tint-1x) var(--tk-h-tint-1x));
+  --tk-color-error-5xlight: oklch(from var(--tk-color-error) var(--tk-l-tint-5x) var(--tk-c-tint-5x) var(--tk-h-tint-5x));
+  --tk-color-error-4xlight: oklch(from var(--tk-color-error) var(--tk-l-tint-4x) var(--tk-c-tint-4x) var(--tk-h-tint-4x));
+  --tk-color-error-3xlight: oklch(from var(--tk-color-error) var(--tk-l-tint-3x) var(--tk-c-tint-3x) var(--tk-h-tint-3x));
+  --tk-color-error-2xlight: oklch(from var(--tk-color-error) var(--tk-l-tint-2x) var(--tk-c-tint-2x) var(--tk-h-tint-2x));
+  --tk-color-error-1xlight: oklch(from var(--tk-color-error) var(--tk-l-tint-1x) var(--tk-c-tint-1x) var(--tk-h-tint-1x));
   
   /* Shades */
-  --tk-color-danger-1xdark: oklch(from var(--tk-color-danger) var(--tk-l-shade-1x) var(--tk-c-shade-1x) var(--tk-h-shade-1x));
-  --tk-color-danger-2xdark: oklch(from var(--tk-color-danger) var(--tk-l-shade-2x) var(--tk-c-shade-2x) var(--tk-h-shade-2x));
-  --tk-color-danger-3xdark: oklch(from var(--tk-color-danger) var(--tk-l-shade-3x) var(--tk-c-shade-3x) var(--tk-h-shade-3x));
-  --tk-color-danger-4xdark: oklch(from var(--tk-color-danger) var(--tk-l-shade-4x) var(--tk-c-shade-4x) var(--tk-h-shade-4x));
-  --tk-color-danger-5xdark: oklch(from var(--tk-color-danger) var(--tk-l-shade-5x) var(--tk-c-shade-5x) var(--tk-h-shade-5x));
+  --tk-color-error-1xdark: oklch(from var(--tk-color-error) var(--tk-l-shade-1x) var(--tk-c-shade-1x) var(--tk-h-shade-1x));
+  --tk-color-error-2xdark: oklch(from var(--tk-color-error) var(--tk-l-shade-2x) var(--tk-c-shade-2x) var(--tk-h-shade-2x));
+  --tk-color-error-3xdark: oklch(from var(--tk-color-error) var(--tk-l-shade-3x) var(--tk-c-shade-3x) var(--tk-h-shade-3x));
+  --tk-color-error-4xdark: oklch(from var(--tk-color-error) var(--tk-l-shade-4x) var(--tk-c-shade-4x) var(--tk-h-shade-4x));
+  --tk-color-error-5xdark: oklch(from var(--tk-color-error) var(--tk-l-shade-5x) var(--tk-c-shade-5x) var(--tk-h-shade-5x));
 
   /* Alphas */
-  --tk-color-danger-1a: oklch(from var(--tk-color-danger) l c h / var(--tk-alpha-1));
-  --tk-color-danger-2a: oklch(from var(--tk-color-danger) l c h / var(--tk-alpha-2));
-  --tk-color-danger-3a: oklch(from var(--tk-color-danger) l c h / var(--tk-alpha-3));
-  --tk-color-danger-4a: oklch(from var(--tk-color-danger) l c h / var(--tk-alpha-4));
-  --tk-color-danger-5a: oklch(from var(--tk-color-danger) l c h / var(--tk-alpha-5));
-  --tk-color-danger-6a: oklch(from var(--tk-color-danger) l c h / var(--tk-alpha-6));
-  --tk-color-danger-7a: oklch(from var(--tk-color-danger) l c h / var(--tk-alpha-7));
-  --tk-color-danger-8a: oklch(from var(--tk-color-danger) l c h / var(--tk-alpha-8));
-  --tk-color-danger-9a: oklch(from var(--tk-color-danger) l c h / var(--tk-alpha-9));
-  --tk-color-danger-10a: oklch(from var(--tk-color-danger) l c h / var(--tk-alpha-10));
+  --tk-color-error-1a: oklch(from var(--tk-color-error) l c h / var(--tk-alpha-1));
+  --tk-color-error-2a: oklch(from var(--tk-color-error) l c h / var(--tk-alpha-2));
+  --tk-color-error-3a: oklch(from var(--tk-color-error) l c h / var(--tk-alpha-3));
+  --tk-color-error-4a: oklch(from var(--tk-color-error) l c h / var(--tk-alpha-4));
+  --tk-color-error-5a: oklch(from var(--tk-color-error) l c h / var(--tk-alpha-5));
+  --tk-color-error-6a: oklch(from var(--tk-color-error) l c h / var(--tk-alpha-6));
+  --tk-color-error-7a: oklch(from var(--tk-color-error) l c h / var(--tk-alpha-7));
+  --tk-color-error-8a: oklch(from var(--tk-color-error) l c h / var(--tk-alpha-8));
+  --tk-color-error-9a: oklch(from var(--tk-color-error) l c h / var(--tk-alpha-9));
+  --tk-color-error-10a: oklch(from var(--tk-color-error) l c h / var(--tk-alpha-10));
 
   /* ── INFO ──────────────────────────────────────────────────────────────── */
   --tk-color-info: oklch(0.58 0.18 245);
@@ -439,10 +405,10 @@
 
 :root{
   --tk-color-shadow: oklch(0.20 0.02 265); /* Default fallback */
-  --tk-shadow-xs: 0 1px 2px 0 color-mix(in oklch, var(--tk-color-shadow) 5%, transparent);
-  --tk-shadow-sm: 0 1px 3px 0 color-mix(in oklch, var(--tk-color-shadow) 10%, transparent), 0 1px 2px -1px color-mix(in oklch, var(--tk-color-shadow) 10%, transparent);
-  --tk-shadow-base: 0 4px 6px -1px color-mix(in oklch, var(--tk-color-shadow) 10%, transparent), 0 2px 4px -2px color-mix(in oklch, var(--tk-color-shadow) 10%, transparent);
-  --tk-shadow-lg: 0 10px 15px -3px color-mix(in oklch, var(--tk-color-shadow) 10%, transparent), 0 4px 6px -4px color-mix(in oklch, var(--tk-color-shadow) 10%, transparent);
-  --tk-shadow-xl: 0 20px 25px -5px color-mix(in oklch, var(--tk-color-shadow) 10%, transparent), 0 8px 10px -6px color-mix(in oklch, var(--tk-color-shadow) 10%, transparent);
-  --tk-shadow-2xl: 0 25px 50px -12px color-mix(in oklch, var(--tk-color-shadow) 25%, transparent);
+  --tk-color-shadow-xs: 0 1px 2px 0 color-mix(in oklch, var(--tk-color-shadow) 5%, transparent);
+  --tk-color-shadow-sm: 0 1px 3px 0 color-mix(in oklch, var(--tk-color-shadow) 10%, transparent), 0 1px 2px -1px color-mix(in oklch, var(--tk-color-shadow) 10%, transparent);
+  --tk-color-shadow-md: 0 4px 6px -1px color-mix(in oklch, var(--tk-color-shadow) 10%, transparent), 0 2px 4px -2px color-mix(in oklch, var(--tk-color-shadow) 10%, transparent);
+  --tk-color-shadow-lg: 0 10px 15px -3px color-mix(in oklch, var(--tk-color-shadow) 10%, transparent), 0 4px 6px -4px color-mix(in oklch, var(--tk-color-shadow) 10%, transparent);
+  --tk-color-shadow-xl: 0 20px 25px -5px color-mix(in oklch, var(--tk-color-shadow) 10%, transparent), 0 8px 10px -6px color-mix(in oklch, var(--tk-color-shadow) 10%, transparent);
+  --tk-color-shadow-2xl: 0 25px 50px -12px color-mix(in oklch, var(--tk-color-shadow) 25%, transparent);
 }

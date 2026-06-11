@@ -1,0 +1,132 @@
+   :root{
+   /*
+   * Grid Properties
+   *
+   * These variables define common grid layout values for consistent usage.
+   * CSS Grid is a two-dimensional layout system for complex layouts.
+   */
+
+    /* Grid Configuration */
+    --tk-grid-column-count-12: 12; /* Default number of columns */
+    --tk-grid-min-col-width-2xs: 80px; /* Minimum column width for responsive grids */
+    --tk-grid-min-col-width-xs: 160px; /* Minimum column width for responsive grids */
+    --tk-grid-min-col-width-sm: 200px; /* Minimum column width for responsive grids */
+    --tk-grid-min-col-width-md: 280px; /* Minimum column width for responsive grids */
+    --tk-grid-min-col-width-lg: 320px; /* Minimum column width for responsive grids */
+    --tk-grid-min-col-width-xl: 380px; /* Minimum column width for responsive grids */
+    --tk-grid-min-col-width-2xl: 400px; /* Minimum column width for responsive grids */
+    --tk-grid-min-col-width-3xl: 480px; /* Minimum column width for responsive grids */
+    --tk-grid-row-count-1: 1; /* Default number of rows */
+    --tk-grid-min-row-height: 100px; /* Minimum row height for responsive grids */
+
+    /* Grid Item Placement */
+    --tk-min-column-width: 0; /* Minimum width for auto columns */
+    --tk-max-column-width: 1fr; /* Maximum width for auto columns */
+    --tk-min-row-height: 0; /* Minimum height for auto rows */
+    --tk-max-row-height: 1fr; /* Maximum height for auto rows */
+
+    /*
+   * Grid Auto Properties
+   *
+   * These variables define how grid items are automatically placed and sized.
+   * Auto-fit and auto-fill create responsive layouts without media queries.
+   */
+
+      /* Grid Templates */
+    --tk-grid-auto-columns: auto; /* Automatically sized columns */
+    --tk-grid-cols-12: repeat(
+        var(--tk-grid-column-count-12, 12),
+        minmax(0, 1fr)
+    ); /* Equal columns */
+    --tk-grid-cols-auto-fit-2xs: repeat(
+        auto-fit,
+        minmax(var(--tk-grid-min-col-width-2xs, 80px), 1fr)
+    ); /* Responsive columns */
+    --tk-grid-cols-auto-fit-xs: repeat(
+        auto-fit,
+        minmax(var(--tk-grid-min-col-width-xs, 160px), 1fr)
+    ); /* Responsive columns */
+    --tk-grid-cols-auto-fit-sm: repeat(
+        auto-fit,
+        minmax(var(--tk-grid-min-col-width-sm, 200px), 1fr)
+    ); /* Responsive columns */
+    --tk-grid-cols-auto-fit-base: repeat(
+        auto-fit,
+        minmax(var(--tk-grid-min-col-width-md, 280px), 1fr)
+    ); /* Responsive columns */
+    --tk-grid-cols-auto-fit-lg: repeat(
+        auto-fit,
+        minmax(var(--tk-grid-min-col-width-lg, 320px), 1fr)
+    ); /* Responsive columns */
+    --tk-grid-cols-auto-fit-xl: repeat(
+        auto-fit,
+        minmax(var(--tk-grid-min-col-width-xl, 380px), 1fr)
+    ); /* Responsive columns */
+    --tk-grid-cols-auto-fit-2xl: repeat(
+        auto-fit,
+        minmax(var(--tk-grid-min-col-width-2xl, 400px), 1fr)
+    ); /* Responsive columns */
+    --tk-grid-cols-auto-fit-3xl: repeat(
+        auto-fit,
+        minmax(var(--tk-grid-min-col-width-3xl, 480px), 1fr)
+    ); /* Responsive columns */
+
+    --tk-grid-cols-auto-fill-2xs: repeat(
+        auto-fill,
+        minmax(var(--tk-grid-min-col-width-2xs, 80px), 1fr)
+    ); /* Responsive columns */
+    --tk-grid-cols-auto-fill-xs: repeat(
+        auto-fill,
+        minmax(var(--tk-grid-min-col-width-xs, 160px), 1fr)
+    ); /* Responsive columns */
+    --tk-grid-cols-auto-fill-sm: repeat(
+        auto-fill,
+        minmax(var(--tk-grid-min-col-width-sm, 200px), 1fr)
+    ); /* Responsive columns */
+    --tk-grid-cols-auto-fill-md: repeat(
+        auto-fill,
+        minmax(var(--tk-grid-min-col-width-md, 280px), 1fr)
+    ); /* Responsive columns */
+    --tk-grid-cols-auto-fill-lg: repeat(
+        auto-fill,
+        minmax(var(--tk-grid-min-col-width-lg, 320px), 1fr)
+    ); /* Responsive columns */
+    --tk-grid-cols-auto-fill-xl: repeat(
+        auto-fill,
+        minmax(var(--tk-grid-min-col-width-xl, 380px), 1fr)
+    ); /* Responsive columns */
+    --tk-grid-cols-auto-fill-2xl: repeat(
+        auto-fill,
+        minmax(var(--tk-grid-min-col-width-2xl, 400px), 1fr)
+    ); /* Responsive columns */
+    --tk-grid-cols-auto-fill-3xl: repeat(
+        auto-fill,
+        minmax(var(--tk-grid-min-col-width-3xl, 480px), 1fr)
+    ); /* Responsive columns */
+
+    --tk-grid-rows-1: repeat(
+        var(--tk-grid-row-count-1, 1),
+        minmax(0, 1fr)
+    ); /* Equal rows */
+
+    /* Grid Item Placement */
+    --tk-col-span: span var(--tk-column-span, 1); /* Column span for grid items */
+    --tk-row-span: span var(--tk-row-span, 1); /* Row span for grid items */
+
+    /* Grid Flow */
+    --tk-grid-flow-row: row; /* Grid auto-placement by row */
+    --tk-grid-flow-col: column; /* Grid auto-placement by column */
+    --tk-grid-flow-dense: dense; /* Dense packing algorithm */
+
+    /* Grid Auto Columns and Rows */
+    --tk-auto-cols: minmax(
+        var(--tk-min-column-width, 0),
+        var(--tk-max-column-width, 1fr)
+    );
+    --tk-auto-rows: minmax(
+        var(--tk-min-row-height, 0),
+        var(--tk-max-row-height, 1fr)
+    );
+
+
+}

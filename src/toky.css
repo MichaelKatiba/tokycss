@@ -6,12 +6,12 @@
  *         Then just write semantic HTML.
  * ============================================================================ */
 
-@layer styleguide, variables, reset, typography, forms, components, layout, utilities;
+@layer variables, reset, typography, forms, components, layout, utilities;
 
-@import url("./core/selectors/variables.css") layer(variables);
-@import url("./core/selectors/reset.css") layer(reset);
-@import url("./core/selectors/typography.css") layer(typography);
-@import url("./core/selectors/forms.css") layer(forms);
-@import url("./core/selectors/components.css") layer(components);
-@import url("./core/selectors/layout.css") layer(layout);
-@import url("./core/selectors/utilities.css") layer(utilities);
+@import url("./core/styles/variables.css") layer(variables);
+@import url("./core/styles/reset.css") layer(reset);
+@import url("./core/styles/typography.css") layer(typography);
+@import url("./core/styles/forms.css") layer(forms);
+@import url("./core/styles/components.css") layer(components);
+@import url("./core/styles/layout.css") layer(layout);
+@import url("./core/styles/utilities.css") layer(utilities);

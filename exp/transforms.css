@@ -1,5 +1,5 @@
 :root{
-            /* ====================================================================== */
+    /* ====================================================================== */
     /* TRANSFORM SYSTEM                                                       */
     /* ====================================================================== */
 
@@ -21,15 +21,6 @@
     --tk-scale-3xl: scale(0.0078125);
     --tk-scale-full: scale(1);
 
-    --tk-scale-n-2x: scale(-0.75);
-    --tk-scale-n-xs: scale(-0.5);
-    --tk-scale-n-sm: scale(-0.25);
-    --tk-scale-n-md: scale(-0.125);
-    --tk-scale-n-lg: scale(-0.0625);
-    --tk-scale-n-xl: scale(-0.03125);
-    --tk-scale-n-2xl: scale(-0.015625);
-    --tk-scale-n-3xl: scale(-0.0078125);
-
     /* Rotation Transforms */
     --tk-rotate-0: rotate(0deg); /* No rotation */
     --tk-rotate-2x: rotate(5deg); /* 5 degrees rotation */
@@ -42,16 +33,6 @@
     --tk-rotate-3xl: rotate(270deg); /* 270 degrees rotation */
     --tk-rotate-full: rotate(360deg); /* 360 degrees rotation */
 
-    --tk-rotate-n-2x: rotate(-5deg); /* -5 degrees rotation */
-    --tk-rotate-n-xs: rotate(-10deg); /* -10 degrees rotation */
-    --tk-rotate-n-sm: rotate(-15deg); /* -15 degrees rotation */
-    --tk-rotate-n-md: rotate(-20deg); /* -20 degrees rotation */
-    --tk-rotate-n-lg: rotate(-45deg); /* -45 degrees rotation */
-    --tk-rotate-n-xl: rotate(-90deg); /* -90 degrees rotation */
-    --tk-rotate-n-2xl: rotate(-180deg); /* -180 degrees rotation */
-    --tk-rotate-n-3xl: rotate(-270deg); /* -270 degrees rotation */
-    --tk-rotate-n-full: rotate(-360deg); /* -360 degrees rotation */
-
     /* Translation Transforms */
     --tk-translate-x-2x: translateX(5%); /* Move 5% right */
     --tk-translate-x-xs: translateX(10%); /* Move 10% right */
@@ -63,16 +44,6 @@
     --tk-translate-x-3xl: translateX(40%); /* Move 40% right */
     --tk-translate-x-full: translateX(100%); /* Move 100% right */
 
-    --tk-translate-n-x-2x: translateX(-5%); /* Move 5% left */
-    --tk-translate-n-x-xs: translateX(-10%); /* Move 10% left */
-    --tk-translate-n-x-sm: translateX(-15%); /* Move 15% left */
-    --tk-translate-n-x-md: translateX(-20%); /* Move 20% left */
-    --tk-translate-n-x-lg: translateX(-25%); /* Move 25% left */
-    --tk-translate-n-x-xl: translateX(-30%); /* Move 30% left */
-    --tk-translate-n-x-2xl: translateX(-35%); /* Move 35% left */
-    --tk-translate-n-x-3xl: translateX(-40%); /* Move 40% left */
-    --tk-translate-n-x-full: translateX(-100%); /* Move 100% left */
-
     --tk-translate-y-2x: translateY(5%); /* Move 5% down */
     --tk-translate-y-xs: translateY(10%); /* Move 10% down */
     --tk-translate-y-sm: translateY(15%); /* Move 15% down */
@@ -83,13 +54,4 @@
     --tk-translate-y-3xl: translateY(40%); /* Move 40% down */
     --tk-translate-y-full: translateY(100%); /* Move 100% down */
 
-    --tk-translate-n-y-2x: translateY(-5%); /* Move 5% up */
-    --tk-translate-n-y-xs: translateY(-10%); /* Move 10% up */
-    --tk-translate-n-y-sm: translateY(-15%); /* Move 15% up */
-    --tk-translate-n-y-md: translateY(-20%); /* Move 20% up */
-    --tk-translate-n-y-lg: translateY(-25%); /* Move 25% up */
-    --tk-translate-n-y-xl: translateY(-30%); /* Move 30% up */
-    --tk-translate-n-y-2xl: translateY(-35%); /* Move 35% up */
-    --tk-translate-n-y-3xl: translateY(-40%); /* Move 40% up */
-    --tk-translate-n-y-full: translateY(-100%); /* Move 100% up */
 }
