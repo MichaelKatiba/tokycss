@@ -1,11 +1,3 @@
-/* ============================================================================
- * TOKY CSS v1.0
- * A production-grade CSS design system. Zero classes. Zero JavaScript.
- *
- * Usage:  <link rel="stylesheet" href="toky/toky.css">
- *         Then just write semantic HTML.
- * ============================================================================ */
-
 @layer variables, reset, typography, forms, components, layout, utilities;
 
 @import url("./core/styles/variables.css") layer(variables);

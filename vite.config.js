@@ -38,7 +38,7 @@ function tokyBuildPlugin() {
         await fs.writeFile(path.join(outDir, 'toky.css'), unmin.code);
         await fs.writeFile(path.join(outDir, 'toky.min.css'), min.code);
 
-        console.log('✅ SUCCESS: toky.css and toky.min.css are up to date.');
+        console.log('SUCCESS: toky.css and toky.min.css are up to date.');
       } catch (err) {
         console.error('❌ Toky Build Error:', err);
       }

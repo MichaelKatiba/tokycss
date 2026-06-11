@@ -1,29 +1,30 @@
 /* ============================================================================
- * TOKY CSS — STYLEGUIDE
+ * TOKY CSS v0.1.0 — STYLEGUIDE
  * ============================================================================
  * This is your single customization file.
- * TIP: Use https://oklch.com to pick your colors visually.
+ * TIP: Use "https://huemint.com/website-2/#palette=feffff-1a53ff-00ffee-fab700" 
+ to pick your colors visually.
  * ============================================================================ */
 
 @layer styleguide {
   :root {
-    /* 🎨 BRAND COLORS */
+    /* BRAND COLORS */
     --tk-color-primary: oklch(0.52 0.20 270);
     --tk-color-secondary: oklch(0.62 0.14 195);
     --tk-color-accent: oklch(0.72 0.17 75);
 
-    /* Theme hue — tints grays toward your brand */
+    /* Theme hue — tint it toward your brand */
     --tk-color-theme: oklch(0.95 0.008 265);
 
-    /* 🔤 TYPOGRAPHY */
+    /* TYPOGRAPHY */
     --tk-font-sans: "Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --tk-font-serif: "Georgia", "Times New Roman", serif;
-    --tk-font-mono: "JetBrains Mono", "Fira Code", "SF Mono", monospace;
+    --tk-font-mono: "JetBrains Mono", "Fira Code", "SF Mono", Consolas, monospace;
 
-    --tk-font-display: "Inter", var(--tk-font-sans);
-    --tk-font-heading: "Inter", var(--tk-font-sans);
-    --tk-font-body: "Inter", var(--tk-font-sans);
-    --tk-font-num: Consolas, var(--tk-font-mono);
+    --tk-font-display: var(--tk-font-sans);
+    --tk-font-heading: var(--tk-font-sans);
+    --tk-font-body: var(--tk-font-sans);
+    --tk-font-num: var(--tk-font-mono);
 
     --tk-page-gutter: var(--tk-size-20);
     --tk-content-width: 80ch;
