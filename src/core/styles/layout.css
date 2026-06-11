@@ -66,8 +66,8 @@ aside {
  * It establishes the page grid defined by our engine.
  */
 .layout-grid {
-    display: grid !important;
-    grid-template-columns: var(--tk-layout-grid) !important;
+    display: grid;
+    grid-template-columns: var(--tk-layout-grid);
 }
 
 /* --- 2. The Default Placement Helper --- */
@@ -77,7 +77,7 @@ aside {
  * accidental full-bleed elements and provides a stable foundation.
  */
 .layout-grid > * {
-    grid-column: main !important; /* The 'main' named grid area */
+    grid-column: main; /* The 'main' named grid area */
 }
 
 /* --- 3. Simple Lane Utilities --- */
@@ -89,48 +89,48 @@ aside {
 
 /* Places an element in the main, readable content layout. */
 .layout--grid > .layout--main {
-    grid-column: main !important;
+    grid-column: main;
 }
 
 .layout--full > .layout--main {
-    grid-column: main !important;
+    grid-column: main;
 }
 
 /* Places an element in the second, larger breakout lane. */
 .layout--grid > .layout--fill {
-    grid-column: fill !important;
+    grid-column: fill;
 }
 
 /* Places an element in the full-width, edge-to-edge layout. */
 .layout--grid > .layout--full {
-    display: grid !important;
-    grid-column: full !important;
+    display: grid;
+    grid-column: full;
 }
 
 
 /* --- 4. Advanced Column Utilities for break column --- */
 .layout--main-start-fill-end {
-    grid-column: main-start / fill-end !important;
+    grid-column: main-start / fill-end;
 }
 
 .layout--main-start-full-end {
-    grid-column: main-start / full-end !important;
+    grid-column: main-start / full-end;
 }
 
 .layout--fill-start-main-end {
-    grid-column: fill-start / main-end !important;
+    grid-column: fill-start / main-end;
 }
 
 .layout--full-start-main-end {
-    grid-column: full-start / main-end !important;
+    grid-column: full-start / main-end;
 }
 
 .layout--full-start-fill-end {
-    grid-column: full-start / fill-end !important;
+    grid-column: full-start / fill-end;
 }
 
 .layout--fill-start-full-end {
-    grid-column: fill-start / full-end !important;
+    grid-column: fill-start / full-end;
 }
 
 /*--- END OF THE PAGE GRID LAYOUT SYSTEM  ---*/

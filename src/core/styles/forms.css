@@ -237,5 +237,5 @@ label:has(+ input:required)::after,
 label:has(+ textarea:required)::after,
 label:has(+ select:required)::after {
   content: " *";
-  color: var(--tk-color-error);
+  color: var(--tk-fg-4x);
 }

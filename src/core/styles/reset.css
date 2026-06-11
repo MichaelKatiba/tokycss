@@ -84,11 +84,11 @@
   a {
     color: inherit;
     text-decoration: inherit;
+    cursor: pointer;
   }
 
   ol, ul, menu {
     gap: var(--tk-size-16);
-    flex-direction: column;
     min-width: fit-content;
     display: inline-flex;
   }
@@ -145,7 +145,7 @@
   }
 
   [hidden] {
-    display: none !important;
+    display: none;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -154,10 +154,10 @@
     }
 
     *, :before, :after {
-      scroll-behavior: auto !important;
-      transition-duration: .01ms !important;
-      animation-duration: .01ms !important;
-      animation-iteration-count: 1 !important;
+      scroll-behavior: auto;
+      transition-duration: .01ms;
+      animation-duration: .01ms;
+      animation-iteration-count: 1;
     }
   }
 
