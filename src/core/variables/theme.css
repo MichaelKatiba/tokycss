@@ -1,58 +1,85 @@
 /* ══════════════════════════════════════════════════════════════════════════
-   SEMANTIC TOKENS - Using CSS light-dark() for automatic theme switching
+   SEMANTIC TOKENS - Using prefers-color-scheme for automatic theme switching
    Mapping strategy:
    - Light mode: backgrounds use TINTS, foregrounds use SHADES
    - Dark mode: backgrounds use SHADES, foregrounds use TINTS
    ══════════════════════════════════════════════════════════════════════════ */
 
-:root { 
-  /* Enable light-dark() function */
+:root {
   color-scheme: light dark;
 
   /* ── BACKGROUNDS ──────────────────────────────────────────────────── */
-  --tk-bg-5x: light-dark(var(--tk-color-theme-5xlight), var(--tk-color-theme-5xdark));
-  --tk-bg-4x: light-dark(var(--tk-color-theme-4xlight), var(--tk-color-theme-4xdark));
-  --tk-bg-3x: light-dark(var(--tk-color-theme-3xlight), var(--tk-color-theme-3xdark));
-  --tk-bg-2x: light-dark(var(--tk-color-theme-2xlight), var(--tk-color-theme-2xdark));
-  --tk-bg-1x: light-dark(var(--tk-color-theme-1xlight), var(--tk-color-theme-1xdark));
+  --tk-bg-5x: var(--tk-color-theme-5xlight);
+  --tk-bg-4x: var(--tk-color-theme-4xlight);
+  --tk-bg-3x: var(--tk-color-theme-3xlight);
+  --tk-bg-2x: var(--tk-color-theme-2xlight);
+  --tk-bg-1x: var(--tk-color-theme-1xlight);
 
   /* Status backgrounds */
-  --tk-bg-success: light-dark(var(--tk-color-success-4xlight), var(--tk-color-success-4xdark));
-  --tk-bg-warning: light-dark(var(--tk-color-warning-4xlight), var(--tk-color-warning-4xdark));
-  --tk-bg-error: light-dark(var(--tk-color-error-4xlight), var(--tk-color-error-4xdark));
-  --tk-bg-info: light-dark(var(--tk-color-info-4xlight), var(--tk-color-info-4xdark));
+  --tk-bg-success: var(--tk-color-success-4xlight);
+  --tk-bg-warning: var(--tk-color-warning-4xlight);
+  --tk-bg-error: var(--tk-color-error-4xlight);
+  --tk-bg-info: var(--tk-color-info-4xlight);
 
   /* ── FOREGROUNDS (Text/Icons) ──────────────────────────────────────────── */
-  --tk-fg-5x: light-dark(var(--tk-color-theme-5xdark), var(--tk-color-theme-5xlight));
-  --tk-fg-4x: light-dark(var(--tk-color-theme-4xdark), var(--tk-color-theme-4xlight));
-  --tk-fg-3x: light-dark(var(--tk-color-theme-3xdark), var(--tk-color-theme-3xlight));
-  --tk-fg-2x: light-dark(var(--tk-color-theme-2xdark), var(--tk-color-theme-2xlight));
-  --tk-fg-1x: light-dark(var(--tk-color-theme-1xdark), var(--tk-color-theme-1xlight));
+  --tk-fg-5x: var(--tk-color-theme-5xdark);
+  --tk-fg-4x: var(--tk-color-theme-4xdark);
+  --tk-fg-3x: var(--tk-color-theme-3xdark);
+  --tk-fg-2x: var(--tk-color-theme-2xdark);
+  --tk-fg-1x: var(--tk-color-theme-1xdark);
 
   /* Status foregrounds */
-  --tk-fg-success: light-dark(var(--tk-color-success-2xdark), var(--tk-color-success-2xlight));
-  --tk-fg-info: light-dark(var(--tk-color-info-2xdark), var(--tk-color-info-2xlight));
-  --tk-fg-warning: light-dark(var(--tk-color-warning-3xdark), var(--tk-color-warning-2xlight));
-  --tk-fg-error: light-dark(var(--tk-color-error-2xdark), var(--tk-color-error-2xlight));
+  --tk-fg-success: var(--tk-color-success-2xdark);
+  --tk-fg-info: var(--tk-color-info-2xdark);
+  --tk-fg-warning: var(--tk-color-warning-3xdark);
+  --tk-fg-error: var(--tk-color-error-2xdark);
 
   /* ── FOCUS & INTERACTION ─────────────────────────────────────────────────*/
   --tk-focus-ring: var(--tk-color-primary);
   --tk-focus-ring-alt: var(--tk-bg-surface);
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* ── BACKGROUNDS ────────────────────────────────────── */
+    --tk-bg-5x: var(--tk-color-theme-5xdark);
+    --tk-bg-4x: var(--tk-color-theme-4xdark);
+    --tk-bg-3x: var(--tk-color-theme-3xdark);
+    --tk-bg-2x: var(--tk-color-theme-2xdark);
+    --tk-bg-1x: var(--tk-color-theme-1xdark);
+
+    /* Status backgrounds */
+    --tk-bg-success: var(--tk-color-success-4xdark);
+    --tk-bg-warning: var(--tk-color-warning-4xdark);
+    --tk-bg-error: var(--tk-color-error-4xdark);
+    --tk-bg-info: var(--tk-color-info-4xdark);
+
+    /* ── FOREGROUNDS (Text/Icons) ──────────────────────────── */
+    --tk-fg-5x: var(--tk-color-theme-5xlight);
+    --tk-fg-4x: var(--tk-color-theme-4xlight);
+    --tk-fg-3x: var(--tk-color-theme-3xlight);
+    --tk-fg-2x: var(--tk-color-theme-2xlight);
+    --tk-fg-1x: var(--tk-color-theme-1xlight);
+
+    /* Status foregrounds */
+    --tk-fg-success: var(--tk-color-success-2xlight);
+    --tk-fg-info: var(--tk-color-info-2xlight);
+    --tk-fg-warning: var(--tk-color-warning-2xlight);
+    --tk-fg-error: var(--tk-color-error-2xlight);
+  }
+}
+
 /* ══════════════════════════════════════════════════════════════════════════
    MANUAL THEME OVERRIDES
 
-   These override the automatic light-dark() behavior when user explicitly
-   selects a theme via data-theme attribute.
+   These override the automatic prefers-color-scheme behavior when user
+   explicitly selects a theme via data-theme attribute.
    ══════════════════════════════════════════════════════════════════════════ */
 
-/* Force light mode */
 [data-theme="light"] {
   color-scheme: light;
 }
 
-/* Force dark mode */
 [data-theme="dark"] {
   color-scheme: dark;
 }

@@ -21,7 +21,7 @@ select {
   border: 1px solid var(--tk-bg-4x);
   border-radius: var(--tk-size-8);
   outline: none;
-  transition: border-color var(--tk-duration-fast) var(--tk-easing), box-shadow var(--tk-duration-fast) var(--tk-easing);
+  transition: border-color var(--tk-duration-xs) var(--tk-ease), box-shadow var(--tk-duration-xs) var(--tk-ease);
 }
 
 input:where([type="text"], [type="email"], [type="password"], [type="url"], [type="tel"], [type="number"], [type="search"], [type="date"], [type="datetime-local"], [type="month"], [type="week"], [type="time"]):hover,
@@ -75,7 +75,7 @@ input[type="radio"] {
   position: relative;
   cursor: pointer;
   flex-shrink: 0;
-  transition: background-color var(--tk-duration-fast) var(--tk-easing), border-color var(--tk-duration-fast) var(--tk-easing);
+  transition: background-color var(--tk-duration-xs) var(--tk-ease), border-color var(--tk-duration-xs) var(--tk-ease);
 }
 
 input[type="checkbox"] {
@@ -143,7 +143,7 @@ input[type="range"]::-webkit-slider-thumb {
   border: 3px solid var(--tk-bg-4x);
   box-shadow: var(--tk-color-shadow-sm);
   cursor: grab;
-  transition: transform var(--tk-duration-fast) var(--tk-easing);
+  transition: transform var(--tk-duration-xs) var(--tk-ease);
 }
 
 input[type="range"]::-webkit-slider-thumb:hover {
@@ -186,7 +186,7 @@ input[type="file"]::file-selector-button {
   border-radius: var(--tk-size-8);
   cursor: pointer;
   margin-inline-end: var(--tk-size-4);
-  transition: background-color var(--tk-duration-fast) var(--tk-easing);
+  transition: background-color var(--tk-duration-xs) var(--tk-ease);
 }
 
 input[type="file"]::file-selector-button:hover {

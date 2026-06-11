@@ -74,7 +74,7 @@ small {
   text-decoration-color: var(--tk-color-primary-2a);
   text-underline-offset: 0.15em;
   text-decoration-thickness: 1px;
-  transition: color var(--tk-duration-fast) var(--tk-easing), text-decoration-color var(--tk-duration-fast) var(--tk-easing);
+  transition: color var(--tk-duration-xs) var(--tk-ease), text-decoration-color var(--tk-duration-xs) var(--tk-ease);
 }
 
 :where(article, section, main) a:not([role="button"]):hover {
@@ -222,7 +222,7 @@ summary {
 summary::before {
   content: "▸";
   font-size: 0.8em;
-  transition: transform var(--tk-duration-normal) var(--tk-easing);
+  transition: transform var(--tk-duration-md) var(--tk-ease);
   display: inline-block;
 }
 

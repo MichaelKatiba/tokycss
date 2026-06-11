@@ -21,11 +21,11 @@ input[type="reset"],
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
   transition:
-    background-color var(--tk-duration-slow) var(--tk-easing),
-    color var(--tk-duration-slow) var(--tk-easing),
-    border-color var(--tk-duration-slow) var(--tk-easing),
-    box-shadow var(--tk-duration-slow) var(--tk-easing),
-    transform var(--tk-duration-slow) var(--tk-easing);
+    background-color var(--tk-duration-sm) var(--tk-ease),
+    color var(--tk-duration-sm) var(--tk-ease),
+    border-color var(--tk-duration-sm) var(--tk-ease),
+    box-shadow var(--tk-duration-sm) var(--tk-ease),
+    transform var(--tk-duration-sm) var(--tk-ease);
 }
 
 :where(form, fieldset, [role="group"]) button:active,
@@ -72,7 +72,7 @@ td {
 }
 
 tbody tr {
-  transition: background-color var(--tk-duration-sm) var(--tk-easing);
+  transition: background-color var(--tk-duration-sm) var(--tk-ease);
 }
 
 tbody tr:hover {
@@ -112,7 +112,7 @@ dialog::backdrop {
 }
 
 dialog[open] {
-  animation: toky-dialog-in var(--tk-duration-normal) var(--tk-easing);
+  animation: toky-dialog-in var(--tk-duration-md) var(--tk-ease);
 }
 
 @keyframes toky-dialog-in {
@@ -145,8 +145,8 @@ nav a {
   border-radius: var(--tk-size-8);
   text-decoration: none;
   transition:
-    color var(--tk-duration-fast) var(--tk-easing),
-    background-color var(--tk-duration-fast) var(--tk-easing);
+    color var(--tk-duration-xs) var(--tk-ease),
+    background-color var(--tk-duration-xs) var(--tk-ease);
 }
 
 nav a:hover {
